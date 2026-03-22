@@ -5,60 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Alma Rachel Ipe — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.css"/>
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;
+  --serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;
+  --pad:40px;--gap:10px;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;object-fit:cover;}
+
+/* ── NAV ── */
+#site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding:22px var(--pad);pointer-events:none;transition:color 0.4s;
+}
+#site-nav.light-ui{color:#fff;}
+#site-nav.dark-ui{color:var(--black);}
+.nav-name{font-family:var(--serif);font-weight:300;font-size:20px;letter-spacing:0.04em;pointer-events:all;cursor:pointer;}
+.nav-links{display:flex;gap:28px;pointer-events:all;}
+.nav-links a{font-family:var(--sans);font-weight:300;font-size:15px;letter-spacing:0.06em;text-transform:lowercase;opacity:0.85;transition:opacity 0.2s;}
+.nav-links a:hover{opacity:1;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;pointer-events:all;}
+.hamburger span{display:block;width:22px;height:1px;background:currentColor;}
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--white);z-index:600;flex-direction:column;align-items:center;justify-content:center;gap:40px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:var(--serif);font-weight:300;font-size:36px;color:var(--black);}
+.mobile-close{position:absolute;top:24px;right:40px;font-size:24px;cursor:pointer;color:var(--black);}
+
 /* ── HOME ── */
 #home{position:relative;width:100%;height:100vh;overflow:hidden;background:#111;}
-.video-slide{position:absolute;inset:0;opacity:0;}
+.video-slide{position:absolute;inset:0;opacity:0;transition:opacity 0.05s;}
 .video-slide.active{opacity:1;}
 .video-slide video{width:100%;height:100%;object-fit:cover;display:block;}
 .video-slide .color-bg{width:100%;height:100%;}
 body.light-ui .home-overlay{color:#fff;}
-body.dark-ui  .home-overlay{color:var(--black);}
-.home-overlay{
-  position:absolute;bottom:52px;left:50%;transform:translateX(-50%);
-  text-align:center;pointer-events:all;white-space:nowrap;
-}
-.home-collection{
-  font-family:var(--serif);font-weight:300;font-size:11px;
-  letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;
-}
-.home-see-work{
-  font-family:var(--sans);font-weight:300;font-size:10px;
-  letter-spacing:0.15em;text-transform:lowercase;display:block;
-  cursor:pointer;transition:opacity 0.2s;
-}
+body.dark-ui .home-overlay{color:var(--black);}
+.home-overlay{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);text-align:center;pointer-events:all;white-space:nowrap;}
+.home-collection{font-family:var(--serif);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;}
+.home-see-work{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:0.15em;text-transform:lowercase;display:block;cursor:pointer;transition:opacity 0.2s;}
 .home-see-work:hover{opacity:0.6;}
 
-/* ── WORK PAGE ── */
+/* ── WORK ── */
 #work{padding-top:0;}
-.work-bar{
-  position:sticky;top:0;z-index:400;background:var(--white);
-  width:100%;height:80px;padding:12px var(--pad) 10px;
-  display:flex;flex-direction:column;justify-content:space-between;
-}
-.work-bar-title{
-  font-family:var(--serif);font-weight:300;font-size:18px;
-  letter-spacing:0.02em;line-height:1;
-}
+.work-bar{position:sticky;top:0;z-index:400;background:var(--white);width:100%;height:80px;padding:12px var(--pad) 10px;display:flex;flex-direction:column;justify-content:space-between;}
+.work-bar-title{font-family:var(--serif);font-weight:300;font-size:18px;letter-spacing:0.02em;line-height:1;}
 .work-bar-tabs{display:flex;gap:28px;}
-.work-tab{
-  font-family:var(--sans);font-weight:300;font-size:10px;
-  letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);
-  cursor:pointer;transition:color 0.2s;
-  border-bottom:1px solid transparent;padding-bottom:1px;
-}
+.work-tab{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);cursor:pointer;transition:color 0.2s;border-bottom:1px solid transparent;padding-bottom:1px;}
 .work-tab:hover,.work-tab.active{color:var(--black);border-bottom-color:var(--black);}
 .work-group{padding:64px var(--pad) 0;}
-.group-label{
-  font-family:var(--serif);font-weight:300;font-size:28px;
-  letter-spacing:0.01em;margin-bottom:48px;
-}
-.project-row{display:flex;align-items:center;gap:48px;margin-bottom:54px;cursor:pointer;}
+.group-label{font-family:var(--serif);font-weight:300;font-size:28px;letter-spacing:0.01em;margin-bottom:48px;}
+.project-row{display:flex;align-items:center;gap:48px;margin-bottom:54px;cursor:pointer;text-decoration:none;color:inherit;}
 .project-row.img-right{flex-direction:row;}
 .project-row.img-left{flex-direction:row-reverse;}
 .project-img{width:60%;flex-shrink:0;overflow:hidden;}
-.project-img img{aspect-ratio:4/3;transition:transform 0.6s ease;}
+.project-img img{aspect-ratio:4/3;transition:transform 0.6s ease;background:var(--grey);}
 .project-row:hover .project-img img{transform:scale(1.02);}
 .project-text{width:40%;display:flex;flex-direction:column;justify-content:flex-end;align-self:flex-end;padding-bottom:8px;}
 .project-name{font-family:var(--serif);font-weight:300;font-size:18px;margin-bottom:10px;line-height:1.3;}
@@ -86,6 +90,10 @@ body.dark-ui  .home-overlay{color:var(--black);}
 
 /* ── MOBILE ── */
 @media(max-width:768px){
+  :root{--pad:24px;}
+  #site-nav{padding:18px 24px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
   .work-bar{padding:10px 24px;height:auto;}
   .work-bar-tabs{overflow-x:auto;white-space:nowrap;padding-bottom:4px;gap:20px;}
   .work-group{padding:48px 24px 0;}
@@ -121,9 +129,8 @@ body.dark-ui  .home-overlay{color:var(--black);}
   </div>
 </nav>
 
-<!-- ══════ HOME ══════ -->
+<!-- HOME -->
 <section id="home">
-  <!-- 6 slides: 2 per woven project. Replace color-bg divs with <video> tags when ready -->
   <div class="video-slide active" data-tone="light" data-label="Woven Design Project" data-anchor="row-woven-design">
     <div class="color-bg" style="background:#b8cdd4;"></div>
   </div>
@@ -149,7 +156,7 @@ body.dark-ui  .home-overlay{color:var(--black);}
   </div>
 </section>
 
-<!-- ══════ WORK ══════ -->
+<!-- WORK -->
 <section id="work">
   <div class="work-bar">
     <span class="work-bar-title">Work</span>
@@ -165,130 +172,110 @@ body.dark-ui  .home-overlay{color:var(--black);}
   <!-- WOVEN -->
   <div class="work-group" id="woven">
     <p class="group-label">Woven</p>
-    <a href="projects/woven-design.html" style="display:contents;">
-      <div class="project-row img-right" id="row-woven-design">
-        <div class="project-text">
-          <h3 class="project-name">Woven Design Project</h3>
-          <p class="project-desc">An exploration of structure and texture through handloom weaving — investigating how pattern and material choice can transform a simple grid into a surface with depth and narrative.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e8e4df/999?text=Woven+Design" alt="Woven Design"/></div>
+    <a class="project-row img-right" id="row-woven-design" href="projects/woven-design.html">
+      <div class="project-text">
+        <h3 class="project-name">Woven Design Project</h3>
+        <p class="project-desc">An exploration of structure and texture through handloom weaving — investigating how pattern and material choice can transform a simple grid into a surface with depth and narrative.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/e8e4df/999?text=Woven+Design" alt="Woven Design"/></div>
     </a>
-    <a href="projects/advanced-weaving.html" style="display:contents;">
-      <div class="project-row img-left" id="row-advanced-weaving">
-        <div class="project-text">
-          <h3 class="project-name">Advanced Weaving</h3>
-          <p class="project-desc">A deeper investigation into complex weave structures — exploring double weave, supplementary weft, and the interplay of colour across the loom.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dde3e8/999?text=Advanced+Weaving" alt="Advanced Weaving"/></div>
+    <a class="project-row img-left" id="row-advanced-weaving" href="projects/advanced-weaving.html">
+      <div class="project-text">
+        <h3 class="project-name">Advanced Weaving</h3>
+        <p class="project-desc">A deeper investigation into complex weave structures — exploring double weave, supplementary weft, and the interplay of colour across the loom.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/dde3e8/999?text=Advanced+Weaving" alt="Advanced Weaving"/></div>
     </a>
-    <a href="projects/basic-weaving.html" style="display:contents;">
-      <div class="project-row img-right" id="row-basic-weaving">
-        <div class="project-text">
-          <h3 class="project-name">Basic Weaving</h3>
-          <p class="project-desc">Foundation studies in plain weave, twill, and satin — exploring how threading order creates radically different visual and tactile outcomes from the same yarn.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e8e0d8/999?text=Basic+Weaving" alt="Basic Weaving"/></div>
+    <a class="project-row img-right" id="row-basic-weaving" href="projects/basic-weaving.html">
+      <div class="project-text">
+        <h3 class="project-name">Basic Weaving</h3>
+        <p class="project-desc">Foundation studies in plain weave, twill, and satin — exploring how threading order creates radically different visual and tactile outcomes from the same yarn.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/e8e0d8/999?text=Basic+Weaving" alt="Basic Weaving"/></div>
     </a>
   </div>
 
   <!-- PRINT -->
   <div class="work-group" id="print">
     <p class="group-label">Print</p>
-    <a href="projects/advanced-print.html" style="display:contents;">
-      <div class="project-row img-right">
-        <div class="project-text">
-          <h3 class="project-name">Advanced Print Design</h3>
-          <p class="project-desc">A collection of print explorations using screen printing and digital techniques — examining how motif, repeat, and colour palette build visual rhythm on fabric.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e2dbd2/999?text=Advanced+Print" alt="Advanced Print"/></div>
+    <a class="project-row img-right" href="projects/advanced-print.html">
+      <div class="project-text">
+        <h3 class="project-name">Advanced Print Design</h3>
+        <p class="project-desc">A collection of print explorations using screen printing and digital techniques — examining how motif, repeat, and colour palette build visual rhythm on fabric.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/e2dbd2/999?text=Advanced+Print" alt="Advanced Print"/></div>
     </a>
-    <a href="projects/print-concept.html" style="display:contents;">
-      <div class="project-row img-left">
-        <div class="project-text">
-          <h3 class="project-name">Print Concept</h3>
-          <p class="project-desc">Concept-driven surface design rooted in a single strong idea — tracing the journey from initial research and mark-making to a resolved repeat print.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/d8e0da/999?text=Print+Concept" alt="Print Concept"/></div>
+    <a class="project-row img-left" href="projects/print-concept.html">
+      <div class="project-text">
+        <h3 class="project-name">Print Concept</h3>
+        <p class="project-desc">Concept-driven surface design rooted in a single strong idea — tracing the journey from initial research and mark-making to a resolved repeat print.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/d8e0da/999?text=Print+Concept" alt="Print Concept"/></div>
     </a>
   </div>
 
   <!-- SURFACE DEVELOPMENT -->
   <div class="work-group" id="surface">
     <p class="group-label">Surface Development</p>
-    <a href="projects/fabric-construction.html" style="display:contents;">
-      <div class="project-row img-right">
-        <div class="project-text">
-          <h3 class="project-name">Fabric Construction</h3>
-          <p class="project-desc">Exploring non-woven and unconventional fabric-making — from felting and bonding to layering and manipulation. Each sample questions what fabric can be beyond the loom.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dce4e0/999?text=Fabric+Construction" alt="Fabric Construction"/></div>
+    <a class="project-row img-right" href="projects/fabric-construction.html">
+      <div class="project-text">
+        <h3 class="project-name">Fabric Construction</h3>
+        <p class="project-desc">Exploring non-woven and unconventional fabric-making — from felting and bonding to layering and manipulation. Each sample questions what fabric can be beyond the loom.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/dce4e0/999?text=Fabric+Construction" alt="Fabric Construction"/></div>
     </a>
-    <a href="projects/embroidery.html" style="display:contents;">
-      <div class="project-row img-left">
-        <div class="project-text">
-          <h3 class="project-name">Embroidery</h3>
-          <p class="project-desc">Hand embroidery as a slow, meditative surface practice — exploring stitch as drawing, building texture, density, and pattern one thread at a time.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e0dcd8/999?text=Embroidery" alt="Embroidery"/></div>
+    <a class="project-row img-left" href="projects/embroidery.html">
+      <div class="project-text">
+        <h3 class="project-name">Embroidery</h3>
+        <p class="project-desc">Hand embroidery as a slow, meditative surface practice — exploring stitch as drawing, building texture, density, and pattern one thread at a time.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/e0dcd8/999?text=Embroidery" alt="Embroidery"/></div>
     </a>
   </div>
 
   <!-- APPAREL -->
   <div class="work-group" id="apparel">
     <p class="group-label">Apparel</p>
-    <a href="projects/apparel.html" style="display:contents;">
-      <div class="project-row img-right">
-        <div class="project-text">
-          <h3 class="project-name">Apparel</h3>
-          <p class="project-desc">A garment constructed from self-developed textile — letting the weight, drape, and texture of the fabric inform the silhouette and construction decisions.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e4e0db/999?text=Apparel" alt="Apparel"/></div>
+    <a class="project-row img-right" href="projects/apparel.html">
+      <div class="project-text">
+        <h3 class="project-name">Apparel</h3>
+        <p class="project-desc">A garment constructed from self-developed textile — letting the weight, drape, and texture of the fabric inform the silhouette and construction decisions.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/e4e0db/999?text=Apparel" alt="Apparel"/></div>
     </a>
   </div>
 
   <!-- NARRATIVE -->
   <div class="work-group" id="narrative" style="padding-bottom:100px;">
     <p class="group-label">Narrative</p>
-    <a href="projects/photography.html" style="display:contents;">
-      <div class="project-row img-right">
-        <div class="project-text">
-          <h3 class="project-name">Photography</h3>
-          <p class="project-desc">A photographic series documenting material, craft, and the human relationship with making — finding the extraordinary in everyday textile processes.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/d8dce0/999?text=Photography" alt="Photography"/></div>
+    <a class="project-row img-right" href="projects/photography.html">
+      <div class="project-text">
+        <h3 class="project-name">Photography</h3>
+        <p class="project-desc">A photographic series documenting material, craft, and the human relationship with making — finding the extraordinary in everyday textile processes.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/d8dce0/999?text=Photography" alt="Photography"/></div>
     </a>
-    <a href="projects/comm-graphics.html" style="display:contents;">
-      <div class="project-row img-left">
-        <div class="project-text">
-          <h3 class="project-name">Communication Graphics</h3>
-          <p class="project-desc">Graphic design work developed alongside textile practice — posters, type studies, and visual communication informed by a material-led sensibility.</p>
-          <span class="vp">view project</span>
-        </div>
-        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dbd8e0/999?text=Communication+Graphics" alt="Communication Graphics"/></div>
+    <a class="project-row img-left" href="projects/comm-graphics.html">
+      <div class="project-text">
+        <h3 class="project-name">Communication Graphics</h3>
+        <p class="project-desc">Graphic design work developed alongside textile practice — posters, type studies, and visual communication informed by a material-led sensibility.</p>
+        <span class="vp">view project</span>
       </div>
+      <div class="project-img"><img src="https://placehold.co/800x600/dbd8e0/999?text=Communication+Graphics" alt="Communication Graphics"/></div>
     </a>
   </div>
 </section>
 
-<!-- ══════ ABOUT ══════ -->
+<!-- ABOUT -->
 <section id="about">
   <p class="about-label">About</p>
   <div class="about-inner">
@@ -302,7 +289,7 @@ body.dark-ui  .home-overlay{color:var(--black);}
   </div>
 </section>
 
-<!-- ══════ CONNECT ══════ -->
+<!-- CONNECT -->
 <section id="connect">
   <p class="connect-label">Connect</p>
   <p class="connect-name">Alma Rachel Ipe</p>
@@ -322,10 +309,75 @@ body.dark-ui  .home-overlay{color:var(--black);}
   </div>
 </section>
 
-<script src="js/main.js"></script>
 <script>
-  initVideoCarousel();
-  initWorkTabs();
+// ── MOBILE MENU ──
+function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');}
+function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');}
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function scrollToGroup(id,tab){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.querySelectorAll('.work-tab').forEach(t=>t.classList.remove('active'));
+  if(tab)tab.classList.add('active');
+}
+
+// ── VIDEO CAROUSEL ──
+const slides = document.querySelectorAll('.video-slide');
+const nav    = document.getElementById('site-nav');
+const overlay = document.getElementById('homeOverlay');
+let cur = 0;
+let curAnc = slides[0].dataset.anchor;
+
+function showSlide(i){
+  slides[cur].classList.remove('active');
+  cur = i % slides.length;
+  const s = slides[cur];
+  s.classList.add('active');
+  const tone = s.dataset.tone;
+  document.body.className = tone === 'dark' ? 'dark-ui' : 'light-ui';
+  nav.className            = tone === 'dark' ? 'light-ui' : 'dark-ui';
+  overlay.style.color      = tone === 'dark' ? '#fff' : '#1a1a1a';
+  document.getElementById('homeCollectionName').textContent = s.dataset.label;
+  curAnc = s.dataset.anchor;
+}
+
+// start cycling immediately
+setInterval(() => showSlide(cur + 1), 3500);
+
+// ── NAV COLOUR on scroll ──
+const homeEl = document.getElementById('home');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > homeEl.offsetHeight - 60){
+    nav.className = 'dark-ui';
+  } else {
+    const tone = slides[cur].dataset.tone;
+    nav.className = tone === 'dark' ? 'light-ui' : 'dark-ui';
+  }
+}, {passive:true});
+
+// ── SEE WORK ──
+function scrollToCurrentProject(){
+  const el = document.getElementById(curAnc);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  else document.getElementById('work').scrollIntoView({behavior:'smooth'});
+}
+
+// ── ACTIVE TAB on scroll ──
+const groups = ['woven','print','surface','apparel','narrative'];
+window.addEventListener('scroll', () => {
+  let active = null;
+  groups.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && el.getBoundingClientRect().top <= 120) active = id;
+  });
+  if(active){
+    document.querySelectorAll('.work-tab').forEach(t => {
+      const txt = t.textContent.trim().toLowerCase();
+      t.classList.toggle('active',
+        txt === active || (active === 'surface' && txt.includes('surface'))
+      );
+    });
+  }
+}, {passive:true});
 </script>
 </body>
 </html>
