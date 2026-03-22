@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alma Rachel Ipe — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<style>
+/* ── HOME ── */
+#home{position:relative;width:100%;height:100vh;overflow:hidden;background:#111;}
+.video-slide{position:absolute;inset:0;opacity:0;}
+.video-slide.active{opacity:1;}
+.video-slide video{width:100%;height:100%;object-fit:cover;display:block;}
+.video-slide .color-bg{width:100%;height:100%;}
+body.light-ui .home-overlay{color:#fff;}
+body.dark-ui  .home-overlay{color:var(--black);}
+.home-overlay{
+  position:absolute;bottom:52px;left:50%;transform:translateX(-50%);
+  text-align:center;pointer-events:all;white-space:nowrap;
+}
+.home-collection{
+  font-family:var(--serif);font-weight:300;font-size:11px;
+  letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;
+}
+.home-see-work{
+  font-family:var(--sans);font-weight:300;font-size:10px;
+  letter-spacing:0.15em;text-transform:lowercase;display:block;
+  cursor:pointer;transition:opacity 0.2s;
+}
+.home-see-work:hover{opacity:0.6;}
+
+/* ── WORK PAGE ── */
+#work{padding-top:0;}
+.work-bar{
+  position:sticky;top:0;z-index:400;background:var(--white);
+  width:100%;height:80px;padding:12px var(--pad) 10px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.work-bar-title{
+  font-family:var(--serif);font-weight:300;font-size:18px;
+  letter-spacing:0.02em;line-height:1;
+}
+.work-bar-tabs{display:flex;gap:28px;}
+.work-tab{
+  font-family:var(--sans);font-weight:300;font-size:10px;
+  letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);
+  cursor:pointer;transition:color 0.2s;
+  border-bottom:1px solid transparent;padding-bottom:1px;
+}
+.work-tab:hover,.work-tab.active{color:var(--black);border-bottom-color:var(--black);}
+.work-group{padding:64px var(--pad) 0;}
+.group-label{
+  font-family:var(--serif);font-weight:300;font-size:28px;
+  letter-spacing:0.01em;margin-bottom:48px;
+}
+.project-row{display:flex;align-items:center;gap:48px;margin-bottom:54px;cursor:pointer;}
+.project-row.img-right{flex-direction:row;}
+.project-row.img-left{flex-direction:row-reverse;}
+.project-img{width:60%;flex-shrink:0;overflow:hidden;}
+.project-img img{aspect-ratio:4/3;transition:transform 0.6s ease;}
+.project-row:hover .project-img img{transform:scale(1.02);}
+.project-text{width:40%;display:flex;flex-direction:column;justify-content:flex-end;align-self:flex-end;padding-bottom:8px;}
+.project-name{font-family:var(--serif);font-weight:300;font-size:18px;margin-bottom:10px;line-height:1.3;}
+.project-desc{font-size:11px;line-height:1.85;color:#666;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
+.vp{font-size:10px;letter-spacing:0.1em;color:var(--black);text-transform:lowercase;border-bottom:1px solid var(--black);padding-bottom:1px;display:inline-block;transition:opacity 0.2s;}
+.vp:hover{opacity:0.5;}
+
+/* ── ABOUT ── */
+#about{padding:120px var(--pad);display:flex;flex-direction:column;}
+.about-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:60px;}
+.about-inner{display:flex;gap:80px;align-items:center;}
+.about-photo{width:340px;height:340px;flex-shrink:0;background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:10px;letter-spacing:0.1em;}
+.about-text h2{font-family:var(--serif);font-weight:300;font-size:28px;margin-bottom:20px;line-height:1.2;}
+.about-text p{font-size:12px;line-height:1.95;color:#444;max-width:460px;}
+
+/* ── CONNECT ── */
+#connect{padding:100px var(--pad) 120px;border-top:1px solid #ebebeb;}
+.connect-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:60px;}
+.connect-name{font-family:var(--serif);font-weight:300;font-size:28px;margin-bottom:32px;}
+.connect-links{display:flex;flex-direction:column;gap:18px;}
+.connect-item{display:flex;gap:20px;align-items:baseline;}
+.connect-item-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);width:80px;flex-shrink:0;}
+.connect-item a{font-size:12px;color:var(--black);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-color 0.2s;}
+.connect-item a:hover{border-bottom-color:var(--black);}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .work-bar{padding:10px 24px;height:auto;}
+  .work-bar-tabs{overflow-x:auto;white-space:nowrap;padding-bottom:4px;gap:20px;}
+  .work-group{padding:48px 24px 0;}
+  .project-row,.project-row.img-right,.project-row.img-left{flex-direction:column;gap:16px;}
+  .project-img,.project-text{width:100%;}
+  #about{padding:80px 24px;}
+  .about-inner{flex-direction:column;gap:32px;}
+  .about-photo{width:100%;height:260px;}
+  #connect{padding:80px 24px 100px;}
+}
+</style>
+</head>
+<body class="light-ui">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="closeMobileMenu()">✕</span>
+  <a href="#work" onclick="closeMobileMenu()">Work</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#connect" onclick="closeMobileMenu()">Connect</a>
+</div>
+
+<!-- NAV -->
+<nav id="site-nav" class="light-ui">
+  <span class="nav-name" onclick="scrollToTop()">Alma Rachel Ipe</span>
+  <div class="nav-links">
+    <a href="#work">work</a>
+    <a href="#about">about</a>
+    <a href="#connect">connect</a>
+  </div>
+  <div class="hamburger" onclick="openMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════ HOME ══════ -->
+<section id="home">
+  <!-- 6 slides: 2 per woven project. Replace color-bg divs with <video> tags when ready -->
+  <div class="video-slide active" data-tone="light" data-label="Woven Design Project" data-anchor="row-woven-design">
+    <div class="color-bg" style="background:#b8cdd4;"></div>
+  </div>
+  <div class="video-slide" data-tone="dark" data-label="Woven Design Project" data-anchor="row-woven-design">
+    <div class="color-bg" style="background:#2c3e35;"></div>
+  </div>
+  <div class="video-slide" data-tone="light" data-label="Advanced Weaving" data-anchor="row-advanced-weaving">
+    <div class="color-bg" style="background:#c9b99a;"></div>
+  </div>
+  <div class="video-slide" data-tone="dark" data-label="Advanced Weaving" data-anchor="row-advanced-weaving">
+    <div class="color-bg" style="background:#1e2634;"></div>
+  </div>
+  <div class="video-slide" data-tone="light" data-label="Basic Weaving" data-anchor="row-basic-weaving">
+    <div class="color-bg" style="background:#d4c5b0;"></div>
+  </div>
+  <div class="video-slide" data-tone="dark" data-label="Basic Weaving" data-anchor="row-basic-weaving">
+    <div class="color-bg" style="background:#2a2320;"></div>
+  </div>
+
+  <div class="home-overlay" id="homeOverlay">
+    <span class="home-collection" id="homeCollectionName">Woven Design Project</span>
+    <span class="home-see-work" onclick="scrollToCurrentProject()">see work</span>
+  </div>
+</section>
+
+<!-- ══════ WORK ══════ -->
+<section id="work">
+  <div class="work-bar">
+    <span class="work-bar-title">Work</span>
+    <div class="work-bar-tabs">
+      <span class="work-tab active" onclick="scrollToGroup('woven',this)">woven</span>
+      <span class="work-tab" onclick="scrollToGroup('print',this)">print</span>
+      <span class="work-tab" onclick="scrollToGroup('surface',this)">surface development</span>
+      <span class="work-tab" onclick="scrollToGroup('apparel',this)">apparel</span>
+      <span class="work-tab" onclick="scrollToGroup('narrative',this)">narrative</span>
+    </div>
+  </div>
+
+  <!-- WOVEN -->
+  <div class="work-group" id="woven">
+    <p class="group-label">Woven</p>
+    <a href="projects/woven-design.html" style="display:contents;">
+      <div class="project-row img-right" id="row-woven-design">
+        <div class="project-text">
+          <h3 class="project-name">Woven Design Project</h3>
+          <p class="project-desc">An exploration of structure and texture through handloom weaving — investigating how pattern and material choice can transform a simple grid into a surface with depth and narrative.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e8e4df/999?text=Woven+Design" alt="Woven Design"/></div>
+      </div>
+    </a>
+    <a href="projects/advanced-weaving.html" style="display:contents;">
+      <div class="project-row img-left" id="row-advanced-weaving">
+        <div class="project-text">
+          <h3 class="project-name">Advanced Weaving</h3>
+          <p class="project-desc">A deeper investigation into complex weave structures — exploring double weave, supplementary weft, and the interplay of colour across the loom.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dde3e8/999?text=Advanced+Weaving" alt="Advanced Weaving"/></div>
+      </div>
+    </a>
+    <a href="projects/basic-weaving.html" style="display:contents;">
+      <div class="project-row img-right" id="row-basic-weaving">
+        <div class="project-text">
+          <h3 class="project-name">Basic Weaving</h3>
+          <p class="project-desc">Foundation studies in plain weave, twill, and satin — exploring how threading order creates radically different visual and tactile outcomes from the same yarn.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e8e0d8/999?text=Basic+Weaving" alt="Basic Weaving"/></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- PRINT -->
+  <div class="work-group" id="print">
+    <p class="group-label">Print</p>
+    <a href="projects/advanced-print.html" style="display:contents;">
+      <div class="project-row img-right">
+        <div class="project-text">
+          <h3 class="project-name">Advanced Print Design</h3>
+          <p class="project-desc">A collection of print explorations using screen printing and digital techniques — examining how motif, repeat, and colour palette build visual rhythm on fabric.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e2dbd2/999?text=Advanced+Print" alt="Advanced Print"/></div>
+      </div>
+    </a>
+    <a href="projects/print-concept.html" style="display:contents;">
+      <div class="project-row img-left">
+        <div class="project-text">
+          <h3 class="project-name">Print Concept</h3>
+          <p class="project-desc">Concept-driven surface design rooted in a single strong idea — tracing the journey from initial research and mark-making to a resolved repeat print.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/d8e0da/999?text=Print+Concept" alt="Print Concept"/></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- SURFACE DEVELOPMENT -->
+  <div class="work-group" id="surface">
+    <p class="group-label">Surface Development</p>
+    <a href="projects/fabric-construction.html" style="display:contents;">
+      <div class="project-row img-right">
+        <div class="project-text">
+          <h3 class="project-name">Fabric Construction</h3>
+          <p class="project-desc">Exploring non-woven and unconventional fabric-making — from felting and bonding to layering and manipulation. Each sample questions what fabric can be beyond the loom.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dce4e0/999?text=Fabric+Construction" alt="Fabric Construction"/></div>
+      </div>
+    </a>
+    <a href="projects/embroidery.html" style="display:contents;">
+      <div class="project-row img-left">
+        <div class="project-text">
+          <h3 class="project-name">Embroidery</h3>
+          <p class="project-desc">Hand embroidery as a slow, meditative surface practice — exploring stitch as drawing, building texture, density, and pattern one thread at a time.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e0dcd8/999?text=Embroidery" alt="Embroidery"/></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- APPAREL -->
+  <div class="work-group" id="apparel">
+    <p class="group-label">Apparel</p>
+    <a href="projects/apparel.html" style="display:contents;">
+      <div class="project-row img-right">
+        <div class="project-text">
+          <h3 class="project-name">Apparel</h3>
+          <p class="project-desc">A garment constructed from self-developed textile — letting the weight, drape, and texture of the fabric inform the silhouette and construction decisions.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/e4e0db/999?text=Apparel" alt="Apparel"/></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- NARRATIVE -->
+  <div class="work-group" id="narrative" style="padding-bottom:100px;">
+    <p class="group-label">Narrative</p>
+    <a href="projects/photography.html" style="display:contents;">
+      <div class="project-row img-right">
+        <div class="project-text">
+          <h3 class="project-name">Photography</h3>
+          <p class="project-desc">A photographic series documenting material, craft, and the human relationship with making — finding the extraordinary in everyday textile processes.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/d8dce0/999?text=Photography" alt="Photography"/></div>
+      </div>
+    </a>
+    <a href="projects/comm-graphics.html" style="display:contents;">
+      <div class="project-row img-left">
+        <div class="project-text">
+          <h3 class="project-name">Communication Graphics</h3>
+          <p class="project-desc">Graphic design work developed alongside textile practice — posters, type studies, and visual communication informed by a material-led sensibility.</p>
+          <span class="vp">view project</span>
+        </div>
+        <div class="project-img"><img class="ph r43" src="https://placehold.co/800x600/dbd8e0/999?text=Communication+Graphics" alt="Communication Graphics"/></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════ ABOUT ══════ -->
+<section id="about">
+  <p class="about-label">About</p>
+  <div class="about-inner">
+    <div class="about-photo">your photo</div>
+    <div class="about-text">
+      <h2>Alma Rachel Ipe</h2>
+      <p>I am a third year Textile and Apparel Design student at the National Institute of Design, Andhra Pradesh. My practice sits at the intersection of material research, craft, and design — with a particular interest in understanding what fibres can become beyond their conventional applications.</p><br/>
+      <p>I am drawn to processes that are slow and considered — weaving, embroidery, surface design — and to the questions that emerge when you work closely with material.</p><br/>
+      <p>I believe good design begins with honest curiosity about material and place.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CONNECT ══════ -->
+<section id="connect">
+  <p class="connect-label">Connect</p>
+  <p class="connect-name">Alma Rachel Ipe</p>
+  <div class="connect-links">
+    <div class="connect-item">
+      <span class="connect-item-label">Email</span>
+      <a href="mailto:almarachelipe@gmail.com">almarachelipe@gmail.com</a>
+    </div>
+    <div class="connect-item">
+      <span class="connect-item-label">Instagram</span>
+      <a href="https://instagram.com/_rahael___" target="_blank">@_rahael___</a>
+    </div>
+    <div class="connect-item">
+      <span class="connect-item-label">LinkedIn</span>
+      <a href="https://almarachelipe.com" target="_blank">Alma Rachel Ipe</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+<script>
+  initVideoCarousel();
+  initWorkTabs();
+</script>
+</body>
+</html>
