@@ -5,9 +5,9 @@
 <title>Advanced Weaving — Alma Rachel Ipe</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:40px;--gap:10px;}
+:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:140px;--gap:10px;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:13.5px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 .proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
@@ -20,56 +20,131 @@ img{display:block;width:100%;object-fit:cover;}
 .det-body{font-size:12px;line-height:1.95;color:#444;}
 .det-section{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
 .px{padding:0 var(--pad);}
-.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}.mb0{margin-bottom:0;}
-.pb80{padding-bottom:80px;}.pt32{padding-top:32px;}
+.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}
+.pt32{padding-top:32px;}.pt48{padding-top:48px;}.pb80{padding-bottom:80px;}
 .fw{width:100%;display:block;object-fit:cover;}
-.ph{background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;}
-.sq{aspect-ratio:1;}.r43{aspect-ratio:4/3;}.r34{aspect-ratio:3/4;}.r23{aspect-ratio:2/3;}.r169{aspect-ratio:16/9;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
-.cap{font-size:10px;color:var(--mid);letter-spacing:0.05em;line-height:1.5;}
-.stripe-block{height:48px;background:#7dcfed;margin-bottom:var(--gap);display:flex;align-items:center;padding:0 12px;}
-.swatch{background:#7dcfed;aspect-ratio:1;}
-.rule{border:none;border-top:1px solid #ddd;margin:0;}
+.center-img{display:flex;justify-content:center;}
+.center-img img{width:auto;max-width:100%;}
 .det-next{border-top:1px solid #ebebeb;padding:48px var(--pad) 80px;display:flex;justify-content:space-between;align-items:center;}
 .next-sm{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
 .next-nm{font-family:var(--serif);font-weight:300;font-size:24px;transition:opacity 0.2s;text-decoration:none;display:block;}
 .next-nm:hover{opacity:0.5;}
 .next-ar{font-size:22px;transition:transform 0.2s;text-decoration:none;}
 .next-ar:hover{transform:translateX(5px);}
-@media(max-width:768px){:root{--pad:24px;}.det-h1{font-size:26px;}.g2,.g3,.g4{grid-template-columns:1fr 1fr;}.det-next{padding:40px 24px 60px;}}</style>
+@media(max-width:768px){
+  :root{--pad:24px;}
+  .det-h1{font-size:26px;}
+  .g2{grid-template-columns:1fr;}
+  .brief-row{flex-direction:column !important;}
+  .brief-text{max-width:100% !important;}
+  .brief-img{max-width:100% !important;}
+  .det-next{padding:40px 24px 60px;}
+}
+</style>
 </head>
 <body>
+
 <div class="proj-nav">
   <a class="proj-back" href="../index.html">← All Work</a>
   <span class="proj-site-name">Alma Rachel Ipe</span>
 </div>
 
-<div class="fw ph r169 mb16">Hero Image</div>
-<div class="px pt32 mb32">
-  <p class="det-tag mb8">Woven</p>
-  <h1 class="det-h1">TITLE</h1>
-  <p class="det-sub mb16">ADVANCED WEAVING</p>
-  <p class="det-body">Write about the complex weave structures you explored — double weave, supplementary weft, and colour relationships.</p>
+<!-- HERO IMAGE -->
+<div class="center-img" style="background:#f5f5f3;padding:40px 0;">
+  <img src="../images/advanced-weaving/hero.jpg" alt="Advanced Weaving — Final Piece" style="max-height:85vh;width:auto;"/>
 </div>
-<div class="px mb8"><p class="det-section">Digital Art &amp; Drawing</p></div>
-<div class="px mb8">
-  <div class="g2 mb8"><div class="ph r43">Drawing 1</div><div class="ph r43">Drawing 2</div></div>
-  <div class="g2 mb24"><div class="ph r43">Drawing 3</div><div class="ph r43">Drawing 4</div></div>
-</div>
-<div class="px mb32"><p class="det-body">Write about the digital art and drawing process — references, mark-making, how imagery translated to the loom.</p></div>
-<div class="px mb8">
-  <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:10px;margin-bottom:10px;">
-    <div class="ph" style="aspect-ratio:3/4;">Large image</div>
-    <div style="display:flex;flex-direction:column;gap:10px;"><div class="ph r43">Stacked 1</div><div class="ph r43">Stacked 2</div></div>
+
+<!-- BRIEF + INSPIRATION -->
+<div class="px pt48 mb48">
+  <div class="brief-row" style="display:flex;gap:48px;align-items:flex-start;">
+    <div class="brief-text" style="flex:1;max-width:55%;">
+      <p class="det-tag mb8">Woven</p>
+      <h1 class="det-h1 mb16">Advanced Weaving</h1>
+      <p class="det-sub mb24">ADVANCED WEAVING</p>
+      <p class="det-body">Write about the complex weave structures you explored — double weave, supplementary weft, and colour relationships. Describe the inspiration behind the project and how you developed the concept from initial research to final woven piece.</p>
+    </div>
+    <div class="brief-img" style="flex-shrink:0;max-width:280px;">
+      <p class="det-section mb8">Inspiration</p>
+      <img src="../images/advanced-weaving/dragonfly.jpg" alt="Dragonfly — Inspiration" style="aspect-ratio:3/4;object-fit:cover;"/>
+    </div>
   </div>
-  <div class="g2 mb32"><div class="ph r43">Photo A</div><div class="ph r43">Photo B</div></div>
 </div>
-<div class="fw ph r169 mb64">Closing full-width image</div>
+
+<!-- DIGITAL ART & DRAWING -->
+<div class="px mb16">
+  <p class="det-section mb16">Digital Art &amp; Drawing</p>
+  <p class="det-body mb32">Write about the digital art and drawing process — references, mark-making, how imagery and pattern ideas translated to the loom. Describe how you developed the visual language before weaving.</p>
+</div>
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/advanced-weaving/texture-study.jpg" alt="Texture Study" style="aspect-ratio:3/4;object-fit:cover;"/>
+    <img src="../images/advanced-weaving/digital-artwork.jpg" alt="Digital Artwork" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- COLOUR EXPLORATION -->
+<div class="px mb16">
+  <p class="det-section mb16">Colour Exploration</p>
+  <p class="det-body mb32">Write about the colour exploration process — how you studied colour relationships, developed palettes, and tested different tonal combinations within the weave structure to achieve depth and rhythm.</p>
+</div>
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/advanced-weaving/color-study-1.png" alt="Colour Study 1" style="aspect-ratio:3/4;object-fit:cover;"/>
+    <img src="../images/advanced-weaving/color-study-2.png" alt="Colour Study 2" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- FINAL PIECE STATEMENT -->
+<div class="px mb32">
+  <p class="det-section mb16">Final Woven Piece</p>
+  <p class="det-body">Write about the final woven piece — describe the materials used, the weave structure, and how the digital explorations informed the final outcome. Mention the relationship between the warp and weft, and how colour and texture interact across the surface.</p>
+</div>
+
+<!-- FINAL PIECE — CENTRED -->
+<div class="center-img mb48" style="padding:40px var(--pad);">
+  <img src="../images/advanced-weaving/hero.jpg" alt="Final Woven Piece" style="max-height:80vh;width:auto;"/>
+</div>
+
+<!-- WOVEN SAMPLES -->
+<div class="px mb16">
+  <p class="det-section mb24">Woven Samples</p>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/advanced-weaving/sample-2.jpg" alt="Sample — Geometric Blocks" style="aspect-ratio:16/7;object-fit:cover;"/>
+    <img src="../images/advanced-weaving/sample-1.jpg" alt="Sample — Light Stripes" style="aspect-ratio:16/7;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/advanced-weaving/sample-3.jpg" alt="Sample — Block Pattern" style="aspect-ratio:16/7;object-fit:cover;"/>
+    <img src="../images/advanced-weaving/sample-4.jpg" alt="Sample — Plaid Check" style="aspect-ratio:16/7;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/advanced-weaving/sample-5.jpg" alt="Sample — Dark Stripes" style="aspect-ratio:16/7;object-fit:cover;"/>
+    <img src="../images/advanced-weaving/sample-6.jpg" alt="Sample — Dense Texture" style="aspect-ratio:16/7;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- LOOM PROCESS -->
+<div class="px mb16">
+  <p class="det-section mb24">Process</p>
+</div>
+<div style="padding:0 var(--pad);" class="mb64">
+  <img src="../images/advanced-weaving/loom-process.jpg" alt="Loom Process" style="aspect-ratio:16/10;object-fit:cover;width:100%;"/>
+</div>
+
+<!-- NEXT PROJECT -->
 <div class="det-next">
   <div><p class="next-sm">Next Project</p><a class="next-nm" href="basic-weaving.html">Basic Weaving →</a></div>
   <a class="next-ar" href="basic-weaving.html">→</a>
 </div>
+
 </body>
 </html>
