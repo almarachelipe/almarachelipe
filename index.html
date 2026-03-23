@@ -13,21 +13,21 @@
   --pad:40px;--gap:10px;
 }
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:13.5px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 
 /* ── NAV ── */
 #site-nav{
-  position:fixed;top:0;left:0;right:0;z-index:500;
+  position:fixed;top:0;left:0;right:0;z-index:500;background:var(--white);
   display:flex;justify-content:space-between;align-items:flex-start;
   padding:22px var(--pad);pointer-events:none;transition:color 0.4s;
 }
-#site-nav.light-ui{color:#fff;}
-#site-nav.dark-ui{color:var(--black);}
-.nav-name{font-family:var(--serif);font-weight:300;font-size:20px;letter-spacing:0.04em;pointer-events:all;cursor:pointer;}
+#site-nav.light-ui{color:var(--white);background:transparent;}
+#site-nav.dark-ui{color:var(--white);background:transparent;}
+.nav-name{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:0.04em;pointer-events:all;cursor:pointer;color:inherit;}
 .nav-links{display:flex;gap:28px;pointer-events:all;}
-.nav-links a{font-family:var(--sans);font-weight:300;font-size:15px;letter-spacing:0.06em;text-transform:lowercase;opacity:0.85;transition:opacity 0.2s;}
+.nav-links a{font-family:var(--sans);font-weight:400;font-size:15px;letter-spacing:0.06em;text-transform:lowercase;opacity:0.85;transition:opacity 0.2s;color:inherit;}
 .nav-links a:hover{opacity:1;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;pointer-events:all;}
 .hamburger span{display:block;width:22px;height:1px;background:currentColor;}
@@ -42,17 +42,16 @@ img{display:block;width:100%;object-fit:cover;}
 .video-slide.active{opacity:1;}
 .video-slide video{width:100%;height:100%;object-fit:cover;display:block;}
 .video-slide .color-bg{width:100%;height:100%;}
-body.light-ui .home-overlay{color:#fff;}
-body.dark-ui .home-overlay{color:var(--black);}
+.home-overlay{color:#ffffff !important;}
 .home-overlay{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);text-align:center;pointer-events:all;white-space:nowrap;}
-.home-collection{font-family:var(--serif);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;}
-.home-see-work{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:0.15em;text-transform:lowercase;display:block;cursor:pointer;transition:opacity 0.2s;}
+.home-collection{font-family:var(--serif);font-weight:300;font: size 16px;px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;}
+.home-see-work{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:0.15em;text-transform:lowercase;display:block;cursor:pointer;transition:opacity 0.2s;}
 .home-see-work:hover{opacity:0.6;}
 
 /* ── WORK ── */
 #work{padding-top:0;}
-.work-bar{position:sticky;top:0;z-index:400;background:var(--white);width:100%;height:80px;padding:12px var(--pad) 10px;display:flex;flex-direction:column;justify-content:space-between;}
-.work-bar-title{font-family:var(--serif);font-weight:300;font-size:18px;letter-spacing:0.02em;line-height:1;}
+.work-bar{position:sticky;top:64px;z-index:400;background:var(--white);width:100%;height:80px;padding:12px var(--pad) 10px;display:flex;flex-direction:column;justify-content:space-between;}
+.work-bar-title{font-family:var(--serif);font-weight:300;font-size:18px;padding-top:8px;letter-spacing:0.02em;line-height:1;}
 .work-bar-tabs{display:flex;gap:28px;}
 .work-tab{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);cursor:pointer;transition:color 0.2s;border-bottom:1px solid transparent;padding-bottom:1px;}
 .work-tab:hover,.work-tab.active{color:var(--black);border-bottom-color:var(--black);}
@@ -71,21 +70,21 @@ body.dark-ui .home-overlay{color:var(--black);}
 .vp:hover{opacity:0.5;}
 
 /* ── ABOUT ── */
-#about{padding:120px var(--pad);display:flex;flex-direction:column;}
+#about{padding:120px 120px;display:flex;flex-direction:column;}
 .about-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:60px;}
 .about-inner{display:flex;gap:80px;align-items:center;}
-.about-photo{width:340px;height:340px;flex-shrink:0;background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:10px;letter-spacing:0.1em;}
+.about-photo{width:460px;height:520px;flex-shrink:0;background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:10px;letter-spacing:0.1em;}
 .about-text h2{font-family:var(--serif);font-weight:300;font-size:28px;margin-bottom:20px;line-height:1.2;}
 .about-text p{font-size:12px;line-height:1.95;color:#444;max-width:460px;}
 
 /* ── CONNECT ── */
-#connect{padding:100px var(--pad) 120px;border-top:1px solid #ebebeb;}
+#connect{padding:100px var(--pad) 120px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:1px solid #ebebeb;}
 .connect-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:60px;}
 .connect-name{font-family:var(--serif);font-weight:300;font-size:28px;margin-bottom:32px;}
-.connect-links{display:flex;flex-direction:column;gap:18px;}
+.connect-links{display:flex;flex-direction:row;gap:64px;}
 .connect-item{display:flex;gap:20px;align-items:baseline;}
-.connect-item-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);width:80px;flex-shrink:0;}
-.connect-item a{font-size:12px;color:var(--black);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-color 0.2s;}
+.connect-item-label{font: size 12px;px;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);width:80px;flex-shrink:0;}
+.connect-item a{font-size:16px;color:var(--black);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-color 0.2s;}
 .connect-item a:hover{border-bottom-color:var(--black);}
 
 /* ── MOBILE ── */
@@ -132,22 +131,34 @@ body.dark-ui .home-overlay{color:var(--black);}
 <!-- HOME -->
 <section id="home">
   <div class="video-slide active" data-tone="light" data-label="Woven Design Project" data-anchor="row-woven-design">
-    <div class="color-bg" style="background:#b8cdd4;"></div>
+    <video autoplay muted playsinline loop>
+  <source src="videos/video1c.mp4" type="video/mp4">
+</video>
   </div>
-  <div class="video-slide" data-tone="dark" data-label="Woven Design Project" data-anchor="row-woven-design">
-    <div class="color-bg" style="background:#2c3e35;"></div>
-  </div>
-  <div class="video-slide" data-tone="light" data-label="Advanced Weaving" data-anchor="row-advanced-weaving">
-    <div class="color-bg" style="background:#c9b99a;"></div>
+  <div class="video-slide" data-tone="light" data-label="Woven Design Project" data-anchor="row-woven-design">
+    <video autoplay muted playsinline loop>
+  <source src="videos/video2c.mp4" type="video/mp4">
+</video>
   </div>
   <div class="video-slide" data-tone="dark" data-label="Advanced Weaving" data-anchor="row-advanced-weaving">
-    <div class="color-bg" style="background:#1e2634;"></div>
+    <video autoplay muted playsinline loop>
+  <source src="videos/video3c.mp4" type="video/mp4">
+</video>
+  </div>
+  <div class="video-slide" data-tone="dark" data-label="Advanced Weaving" data-anchor="row-advanced-weaving">
+    <video autoplay muted playsinline loop>
+  <source src="videos/video4c.mp4" type="video/mp4">
+</video>
   </div>
   <div class="video-slide" data-tone="light" data-label="Basic Weaving" data-anchor="row-basic-weaving">
-    <div class="color-bg" style="background:#d4c5b0;"></div>
+    <video autoplay muted playsinline loop>
+  <source src="videos/video5c.mp4" type="video/mp4">
+</video>
   </div>
-  <div class="video-slide" data-tone="dark" data-label="Basic Weaving" data-anchor="row-basic-weaving">
-    <div class="color-bg" style="background:#2a2320;"></div>
+  <div class="video-slide" data-tone="light" data-label="Basic Weaving" data-anchor="row-basic-weaving">
+    <video autoplay muted playsinline loop>
+  <source src="videos/video6c.mp4" type="video/mp4">
+</video>
   </div>
 
   <div class="home-overlay" id="homeOverlay">
@@ -310,7 +321,6 @@ body.dark-ui .home-overlay{color:var(--black);}
 </section>
 
 <script>
-// ── MOBILE MENU ──
 function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');}
 function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');}
 function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
@@ -319,65 +329,48 @@ function scrollToGroup(id,tab){
   document.querySelectorAll('.work-tab').forEach(t=>t.classList.remove('active'));
   if(tab)tab.classList.add('active');
 }
-
-// ── VIDEO CAROUSEL ──
-const slides = document.querySelectorAll('.video-slide');
-const nav    = document.getElementById('site-nav');
-const overlay = document.getElementById('homeOverlay');
-let cur = 0;
-let curAnc = slides[0].dataset.anchor;
-
+const slides=document.querySelectorAll('.video-slide');
+const nav=document.getElementById('site-nav');
+const overlay=document.getElementById('homeOverlay');
+let cur=0,curAnc=slides[0].dataset.anchor;
 function showSlide(i){
   slides[cur].classList.remove('active');
-  cur = i % slides.length;
-  const s = slides[cur];
+  cur=i%slides.length;
+  const s=slides[cur];
   s.classList.add('active');
-  const tone = s.dataset.tone;
-  document.body.className = tone === 'dark' ? 'dark-ui' : 'light-ui';
-  nav.className            = tone === 'dark' ? 'light-ui' : 'dark-ui';
-  overlay.style.color      = tone === 'dark' ? '#fff' : '#1a1a1a';
-  document.getElementById('homeCollectionName').textContent = s.dataset.label;
-  curAnc = s.dataset.anchor;
+  document.getElementById('homeCollectionName').textContent=s.dataset.label;
+  curAnc=s.dataset.anchor;
 }
-
-// start cycling immediately
-setInterval(() => showSlide(cur + 1), 3500);
-
-// ── NAV COLOUR on scroll ──
-const homeEl = document.getElementById('home');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > homeEl.offsetHeight - 60){
-    nav.className = 'dark-ui';
+setInterval(()=>showSlide(cur+1),3500);
+const homeEl=document.getElementById('home');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>homeEl.offsetHeight-60){
+    nav.style.background='#ffffff';
+    nav.style.color='#1a1a1a';
   } else {
-    const tone = slides[cur].dataset.tone;
-    nav.className = tone === 'dark' ? 'light-ui' : 'dark-ui';
+    nav.style.background='transparent';
+    nav.style.color='#ffffff';
   }
-}, {passive:true});
-
-// ── SEE WORK ──
+},{passive:true});
 function scrollToCurrentProject(){
-  const el = document.getElementById(curAnc);
-  if(el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  const el=document.getElementById(curAnc);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'center'});
   else document.getElementById('work').scrollIntoView({behavior:'smooth'});
 }
-
-// ── ACTIVE TAB on scroll ──
-const groups = ['woven','print','surface','apparel','narrative'];
-window.addEventListener('scroll', () => {
-  let active = null;
-  groups.forEach(id => {
-    const el = document.getElementById(id);
-    if(el && el.getBoundingClientRect().top <= 120) active = id;
+const groups=['woven','print','surface','apparel','narrative'];
+window.addEventListener('scroll',()=>{
+  let active=null;
+  groups.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.getBoundingClientRect().top<=120)active=id;
   });
   if(active){
-    document.querySelectorAll('.work-tab').forEach(t => {
-      const txt = t.textContent.trim().toLowerCase();
-      t.classList.toggle('active',
-        txt === active || (active === 'surface' && txt.includes('surface'))
-      );
+    document.querySelectorAll('.work-tab').forEach(t=>{
+      const txt=t.textContent.trim().toLowerCase();
+      t.classList.toggle('active',txt===active||(active==='surface'&&txt.includes('surface')));
     });
   }
-}, {passive:true});
+},{passive:true});
 </script>
 </body>
 </html>
