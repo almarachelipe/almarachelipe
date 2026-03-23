@@ -94,7 +94,7 @@ img{display:block;width:100%;object-fit:cover;}
 /* ── IMAGES ── */
 .fw{width:100%;display:block;object-fit:cover;}
 .ph{background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;}
-.sq{aspect-ratio:1;}
+.sq{aspect-ratio:1;object-fit:cover;object-position:center;}
 .r43{aspect-ratio:4/3;}
 .r34{aspect-ratio:3/4;}
 .r23{aspect-ratio:2/3;}
