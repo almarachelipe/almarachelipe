@@ -5,9 +5,9 @@
 <title>Basic Weaving — Alma Rachel Ipe</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:40px;--gap:10px;}
+:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:140px;--gap:10px;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:13.5px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 .proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
@@ -20,70 +20,189 @@ img{display:block;width:100%;object-fit:cover;}
 .det-body{font-size:12px;line-height:1.95;color:#444;}
 .det-section{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
 .px{padding:0 var(--pad);}
-.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}.mb0{margin-bottom:0;}
-.pb80{padding-bottom:80px;}.pt32{padding-top:32px;}
+.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}
+.pt32{padding-top:32px;}.pt48{padding-top:48px;}.pb80{padding-bottom:80px;}
 .fw{width:100%;display:block;object-fit:cover;}
-.ph{background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;}
-.sq{aspect-ratio:1;}.r43{aspect-ratio:4/3;}.r34{aspect-ratio:3/4;}.r23{aspect-ratio:2/3;}.r169{aspect-ratio:16/9;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
 .cap{font-size:10px;color:var(--mid);letter-spacing:0.05em;line-height:1.5;}
-.stripe-block{height:48px;background:#7dcfed;margin-bottom:var(--gap);display:flex;align-items:center;padding:0 12px;}
-.swatch{background:#7dcfed;aspect-ratio:1;}
-.rule{border:none;border-top:1px solid #ddd;margin:0;}
 .det-next{border-top:1px solid #ebebeb;padding:48px var(--pad) 80px;display:flex;justify-content:space-between;align-items:center;}
 .next-sm{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
 .next-nm{font-family:var(--serif);font-weight:300;font-size:24px;transition:opacity 0.2s;text-decoration:none;display:block;}
 .next-nm:hover{opacity:0.5;}
 .next-ar{font-size:22px;transition:transform 0.2s;text-decoration:none;}
 .next-ar:hover{transform:translateX(5px);}
-@media(max-width:768px){:root{--pad:24px;}.det-h1{font-size:26px;}.g2,.g3,.g4{grid-template-columns:1fr 1fr;}.det-next{padding:40px 24px 60px;}}</style>
+@media(max-width:768px){
+  :root{--pad:24px;}
+  .det-h1{font-size:26px;}
+  .g2{grid-template-columns:1fr;}
+  .g3{grid-template-columns:1fr 1fr;}
+  .brief-row{flex-direction:column !important;}
+  .brief-text{max-width:100% !important;}
+  .brief-img{max-width:100% !important;}
+  .det-next{padding:40px 24px 60px;}
+}
+</style>
 </head>
 <body>
+
 <div class="proj-nav">
   <a class="proj-back" href="../index.html">← All Work</a>
   <span class="proj-site-name">Alma Rachel Ipe</span>
 </div>
 
-<div class="fw ph" style="aspect-ratio:16/5;background:#7dcfed;"></div>
-<div class="px pt32 mb32">
+<!-- TITLE -->
+<div class="px pt48 mb32">
   <p class="det-tag mb8">Woven</p>
-  <h1 class="det-h1">TITLE</h1>
-  <p class="det-sub mb16">BASIC WEAVING</p>
-  <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:48px;margin-top:20px;">
-    <p class="det-body">Write about your foundation weaving studies — plain weave, twill, and satin. What did you discover about threading order and surface quality?</p>
-    <div><div class="ph sq mb8" style="max-width:160px;">Small image</div><p class="det-body" style="font-size:11px;">Short description.</p></div>
+  <h1 class="det-h1 mb8">Basic Weaving</h1>
+  <p class="det-sub">BASIC WEAVING</p>
+</div>
+
+<!-- BRIEF + INSPIRATION -->
+<div class="px mb48">
+  <div class="brief-row" style="display:flex;gap:48px;align-items:flex-start;">
+    <div class="brief-text" style="flex:1;max-width:50%;">
+      <p class="det-section mb8">Brief</p>
+      <p class="det-body">Write about your foundation weaving studies — plain weave, twill, and satin. Describe the project overview, the role of threading order, and how colour and structure work together on the loom to create surface quality.</p>
+    </div>
+    <div class="brief-img" style="flex:1;display:flex;gap:24px;align-items:flex-start;">
+      <img src="../images/basic-weaving/php2.png" alt="Plum-headed Parakeet — Inspiration" style="width:200px;aspect-ratio:3/4;object-fit:cover;flex-shrink:0;"/>
+      <div>
+        <p class="det-section mb8">Inspiration</p>
+        <p class="det-body">Write about the colour inspiration — the plum-headed parakeet and how its vivid greens, blues, and magentas informed the palette and stripe proportions you developed on the loom.</p>
+      </div>
+    </div>
   </div>
 </div>
-<div class="px mb8"><p class="det-section">Colour Palate</p></div>
-<div class="px mb32" style="display:flex;gap:8px;">
-  <div class="swatch" style="width:48px;height:48px;"></div><div class="swatch" style="width:48px;height:48px;"></div>
-  <div class="swatch" style="width:48px;height:48px;"></div><div class="swatch" style="width:48px;height:48px;"></div>
-  <div class="swatch" style="width:48px;height:48px;"></div><div class="swatch" style="width:48px;height:48px;"></div>
+
+<!-- COLOUR PALATE -->
+<div class="px mb16">
+  <p class="det-section mb16">Colour Palate</p>
 </div>
-<div class="px mb8"><p class="det-section">Stripe Rhythm</p></div>
-<div class="px mb32">
-  <div class="stripe-block mb8"><span class="cap">Stripe 1 — describe</span></div>
-  <div class="stripe-block mb8"><span class="cap">Stripe 2 — describe</span></div>
-  <div class="stripe-block mb8"><span class="cap">Stripe 3 — describe</span></div>
-  <div class="stripe-block"><span class="cap">Stripe 4 — describe</span></div>
+<div class="px mb48">
+  <div class="g3">
+    <img src="../images/basic-weaving/stripe%20art1.jpg" alt="Colour Palette 1" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/stripe%20art2.jpg" alt="Colour Palette 2" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/stripe%20art3.jpg" alt="Colour Palette 3" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
 </div>
-<div class="fw ph r169 mb16">Full-width image</div>
-<div class="px mb8">
-  <div class="g2 mb8"><div class="ph r43">Sample A</div><div class="ph r43">Sample B</div></div>
-  <div class="g2 mb8"><div class="ph r43">Sample C</div><div class="ph r43">Sample D</div></div>
-  <div class="g2 mb8"><div class="ph r43">Sample E</div><div class="ph r43">Sample F</div></div>
-  <div class="g2 mb32"><div class="ph r43">Sample G</div><div class="ph r43">Sample H</div></div>
+
+<!-- STRIPE RHYTHM -->
+<div class="px mb16">
+  <p class="det-section mb24">Stripe Rhythm</p>
 </div>
-<div class="px mb32"><p class="det-body">Final reflection — what you learned and what foundational principles you carry forward.</p></div>
+
+<!-- Art + Stripes Row 1 -->
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/art1.jpg" alt="Artwork 1" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/stripes%20art1.jpg" alt="Stripe Rhythm 1" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- Art + Stripes Row 2 -->
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/art2.jpg" alt="Artwork 2" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/stripes%20art2.jpg" alt="Stripe Rhythm 2" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- Art + Stripes Row 3 -->
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/basic-weaving/art3.jpg" alt="Artwork 3" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/stripes%20art3.jpg" alt="Stripe Rhythm 3" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- MAIN STRIPE — FULL WIDTH -->
+<div class="mb48">
+  <img src="../images/basic-weaving/main%20stripe.jpg" alt="Main Stripe Composition" style="width:100%;object-fit:cover;"/>
+</div>
+
+<!-- OUTDOOR PHOTOS -->
+<div class="px mb16">
+  <p class="det-section mb24">Final Piece</p>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/IMG_3834.jpg" alt="Fabric on Leaves" style="aspect-ratio:4/3;object-fit:cover;"/>
+    <img src="../images/basic-weaving/IMG_3840.jpg" alt="Fabric Draped on Leaves" style="aspect-ratio:4/3;object-fit:cover;"/>
+  </div>
+</div>
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/basic-weaving/IMG_3876.jpg" alt="Fabric in Nature" style="aspect-ratio:4/3;object-fit:cover;"/>
+    <img src="../images/basic-weaving/IMG_3885.jpg" alt="Holding Fabric" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- WOVEN SAMPLES -->
+<div class="px mb16">
+  <p class="det-section mb24">Woven Samples</p>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample1.jpeg" alt="Sample 1" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup1.jpeg" alt="Closeup 1" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample2.jpeg" alt="Sample 2" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup2.jpeg" alt="Closeup 2" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample3.jpeg" alt="Sample 3" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup3.jpeg" alt="Closeup 3" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample4.jpeg" alt="Sample 4" style="aspect-ratio:3/4;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup4.jpeg" alt="Closeup 4" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb16">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample5.jpeg" alt="Sample 5" style="aspect-ratio:3/4;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup5.jpeg" alt="Closeup 5" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<div class="px mb48">
+  <div class="g2">
+    <img src="../images/basic-weaving/sample6.jpeg" alt="Sample 6" style="aspect-ratio:3/4;object-fit:cover;"/>
+    <img src="../images/basic-weaving/closeup6.jpeg" alt="Closeup 6" style="aspect-ratio:3/4;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- FINAL REFLECTION -->
+<div class="px mb48">
+  <p class="det-section mb16">Reflection</p>
+  <p class="det-body">Write a final reflection — what you learned about foundational weave structures, how stripe rhythm and colour interact on the loom, and what principles you carry forward into future work.</p>
+</div>
+
+<!-- LOGO / FOOTER -->
 <div class="px pb80">
   <p style="font-family:var(--serif);font-size:20px;font-weight:300;letter-spacing:0.04em;">Alma Rachel Ipe</p>
   <p style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-top:4px;">National Institute of Design</p>
 </div>
+
+<!-- NEXT PROJECT -->
 <div class="det-next">
   <div><p class="next-sm">Next Project</p><a class="next-nm" href="advanced-print.html">Advanced Print Design →</a></div>
   <a class="next-ar" href="advanced-print.html">→</a>
 </div>
+
 </body>
 </html>
