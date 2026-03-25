@@ -5,9 +5,9 @@
 <title>Fabric Construction — Alma Rachel Ipe</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:40px;--gap:10px;}
+:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:140px;--gap:10px;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:13.5px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 .proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
@@ -20,75 +20,169 @@ img{display:block;width:100%;object-fit:cover;}
 .det-body{font-size:12px;line-height:1.95;color:#444;}
 .det-section{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
 .px{padding:0 var(--pad);}
-.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}.mb0{margin-bottom:0;}
-.pb80{padding-bottom:80px;}.pt32{padding-top:32px;}
-.fw{width:100%;display:block;object-fit:cover;}
-.ph{background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;}
-.sq{aspect-ratio:1;}.r43{aspect-ratio:4/3;}.r34{aspect-ratio:3/4;}.r23{aspect-ratio:2/3;}.r169{aspect-ratio:16/9;}
+.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}
+.pt48{padding-top:48px;}.pb80{padding-bottom:80px;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
-.cap{font-size:10px;color:var(--mid);letter-spacing:0.05em;line-height:1.5;}
-.stripe-block{height:48px;background:#7dcfed;margin-bottom:var(--gap);display:flex;align-items:center;padding:0 12px;}
-.swatch{background:#7dcfed;aspect-ratio:1;}
-.rule{border:none;border-top:1px solid #ddd;margin:0;}
+.swatch{width:48px;height:48px;}
+.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:600px;margin:0 auto;}
+.sample-grid img{aspect-ratio:1;object-fit:cover;width:100%;}
 .det-next{border-top:1px solid #ebebeb;padding:48px var(--pad) 80px;display:flex;justify-content:space-between;align-items:center;}
 .next-sm{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
 .next-nm{font-family:var(--serif);font-weight:300;font-size:24px;transition:opacity 0.2s;text-decoration:none;display:block;}
 .next-nm:hover{opacity:0.5;}
 .next-ar{font-size:22px;transition:transform 0.2s;text-decoration:none;}
 .next-ar:hover{transform:translateX(5px);}
-@media(max-width:768px){:root{--pad:24px;}.det-h1{font-size:26px;}.g2,.g3,.g4{grid-template-columns:1fr 1fr;}.det-next{padding:40px 24px 60px;}}</style>
+@media(max-width:768px){
+  :root{--pad:24px;}
+  .det-h1{font-size:26px;}
+  .g2,.sample-grid{grid-template-columns:1fr;}
+  .g3{grid-template-columns:1fr 1fr;}
+  .brief-row{flex-direction:column !important;}
+  .det-next{padding:40px 24px 60px;}
+}
+</style>
 </head>
 <body>
+
 <div class="proj-nav">
   <a class="proj-back" href="../index.html">← All Work</a>
   <span class="proj-site-name">Alma Rachel Ipe</span>
 </div>
 
-<div class="fw ph r169 mb8">Hero Image</div>
-<div style="text-align:center;padding:40px 40px 16px;">
-  <p class="det-tag mb8">Surface Development</p>
-  <h1 class="det-h1">TITLE</h1>
+<!-- HERO STRIPE -->
+<div class="mb32">
+  <img src="../images/fabric-construction/stripe1.jpg" alt="Stripe Pattern" style="width:100%;aspect-ratio:16/4;object-fit:cover;"/>
+</div>
+
+<!-- TITLE -->
+<div class="px mb32">
+  <h1 class="det-h1 mb8">Fabric Construction</h1>
   <p class="det-sub">FABRIC CONSTRUCTION</p>
 </div>
-<div class="fw ph mb16" style="aspect-ratio:16/5;">Full-width strip</div>
-<div class="px mb32" style="display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start;">
-  <p class="det-body">Write about the fabric construction project — what non-woven or unconventional processes were you working with? What question were you trying to answer?</p>
-  <div class="ph sq mb8" style="max-width:160px;">Small image</div>
+
+<!-- BRIEF + INSPIRATION -->
+<div class="px mb32">
+  <div class="brief-row" style="display:flex;gap:40px;align-items:flex-start;">
+    <p class="det-body" style="flex:1;max-width:50%;">Write about the fabric construction project — what non-woven or unconventional processes were you working with? How did the dragonfly's wing structure inspire the surface and texture of the samples you developed?</p>
+    <div style="display:flex;gap:16px;align-items:flex-start;">
+      <img src="../images/fabric-construction/dragonfly.jpg" alt="Dragonfly — Inspiration" style="width:140px;aspect-ratio:3/4;object-fit:cover;flex-shrink:0;"/>
+      <img src="../images/fabric-construction/dragonfly3.jpg" alt="Dragonfly Eye — Macro" style="width:140px;aspect-ratio:3/4;object-fit:cover;flex-shrink:0;"/>
+    </div>
+  </div>
 </div>
-<div class="px mb8"><p class="det-section">Colour Palate</p></div>
-<div class="px mb32" style="display:grid;grid-template-columns:repeat(3,48px);gap:8px;width:fit-content;">
-  <div class="swatch" style="height:48px;"></div><div class="swatch" style="height:48px;"></div><div class="swatch" style="height:48px;"></div>
-  <div class="swatch" style="height:48px;"></div><div class="swatch" style="height:48px;"></div><div class="swatch" style="height:48px;"></div>
+
+<!-- COLOUR SWATCHES -->
+<div class="px mb48">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;max-width:200px;">
+    <div class="swatch" style="background:#3aaa9a;"></div>
+    <div class="swatch" style="background:#1a5a6a;"></div>
+    <div class="swatch" style="background:#5ababa;"></div>
+    <div class="swatch" style="background:#2a8a8a;"></div>
+    <div class="swatch" style="background:#0a3a4a;"></div>
+    <div class="swatch" style="background:#7acaca;"></div>
+  </div>
 </div>
-<div class="px mb8"><p class="det-section">Stripe Rhythm</p></div>
-<div class="px mb32" style="width:70%;">
-  <div class="stripe-block mb8"><span class="cap">Strip 1 — describe</span></div>
-  <div class="stripe-block"><span class="cap">Strip 2 — describe</span></div>
-</div>
-<div class="px mb8"><p class="det-section">Paper Exploration</p></div>
-<div class="px mb32" style="width:70%;">
-  <div class="g2 mb8"><div class="ph r43">Exploration 1</div><div class="ph r43">Exploration 2</div></div>
-  <div class="g2"><div class="ph r43">Exploration 3</div><div class="ph r43">Exploration 4</div></div>
-</div>
-<div class="px mb8"><p class="det-section">Final Samples</p></div>
+
+<!-- COLOUR PALATE -->
 <div class="px mb16">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;align-items:start;"><div class="ph r43">Sample 1</div><div><div class="ph r43 mb8">Detail 1</div><p class="cap">Small description about the sample.</p></div></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;align-items:start;"><div class="ph r43">Sample 2</div><div><div class="ph r43 mb8">Detail 2</div><p class="cap">Small description about the sample.</p></div></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;align-items:start;"><div class="ph r43">Sample 3</div><div><div class="ph r43 mb8">Detail 3</div><p class="cap">Small description about the sample.</p></div></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;align-items:start;"><div class="ph r43">Sample 4</div><div><div class="ph r43 mb8">Detail 4</div><p class="cap">Small description about the sample.</p></div></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;align-items:start;"><div class="ph r43">Sample 5</div><div><div class="ph r43 mb8">Detail 5</div><p class="cap">Small description about the sample.</p></div></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start;"><div class="ph r43">Sample 6</div><div><div class="ph r43 mb8">Detail 6</div><p class="cap">Small description about the sample.</p></div></div>
+  <p class="det-section mb16">Colour Palate</p>
 </div>
-<div class="px mb16"><p class="det-body">Final reflection on the fabric construction work — what these samples demonstrate and what you would develop further.</p></div>
+<div class="px mb48">
+  <div class="g3">
+    <img src="../images/fabric-construction/stripe1.jpg" alt="Colour Palette 1" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe2.jpg" alt="Colour Palette 2" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe3.jpg" alt="Colour Palette 3" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- STRIPE RHYTHM -->
+<div class="px mb16">
+  <p class="det-section mb16">Stripe Rhythm</p>
+</div>
+<div class="px mb48">
+  <div style="display:flex;flex-direction:column;gap:8px;">
+    <img src="../images/fabric-construction/stripe4.jpg" alt="Stripe Rhythm 1" style="width:100%;aspect-ratio:16/3;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe5.jpg" alt="Stripe Rhythm 2" style="width:100%;aspect-ratio:16/3;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe6.jpg" alt="Stripe Rhythm 3" style="width:100%;aspect-ratio:16/3;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe7.jpg" alt="Stripe Rhythm 4" style="width:100%;aspect-ratio:16/3;object-fit:cover;"/>
+    <img src="../images/fabric-construction/stripe8.jpg" alt="Stripe Rhythm 5" style="width:100%;aspect-ratio:16/3;object-fit:cover;"/>
+  </div>
+</div>
+
+<!-- PAPER EXPLORATION -->
+<div class="px mb16">
+  <p class="det-section mb16">Paper Exploration</p>
+</div>
 <div class="px mb64">
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:10px;"><div class="ph r43">Large left</div><div class="ph r43">Small mid</div><div class="ph r43">Small right</div></div>
-  <div class="g3"><div class="ph r43">Bottom 1</div><div class="ph r43">Bottom 2</div><div class="ph r43">Bottom 3</div></div>
+  <div class="g2" style="max-width:700px;">
+    <img src="../images/fabric-construction/paperexploration2.jpg" alt="Paper Exploration — Bubble Wrap" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/fabric-construction/paperexploration1.jpg" alt="Paper Exploration — Mosaic" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/fabric-construction/paperexploration3.jpg" alt="Paper Exploration — Line Drawing" style="aspect-ratio:1;object-fit:cover;"/>
+    <img src="../images/fabric-construction/paperexploration5.jpg" alt="Paper Exploration — Crackle Pattern" style="aspect-ratio:1;object-fit:cover;"/>
+  </div>
 </div>
+
+<!-- FINAL SAMPLES -->
+<div class="px mb16">
+  <p class="det-section mb24">Final Samples</p>
+</div>
+
+<div class="px mb48">
+  <div class="sample-grid">
+    <!-- Row 1 -->
+    <img src="../images/fabric-construction/sampe1.jpg" alt="Sample 1"/>
+    <img src="../images/fabric-construction/closeups1.jpg" alt="Closeup 1"/>
+    <!-- Row 2 -->
+    <img src="../images/fabric-construction/sample2.jpg" alt="Sample 2"/>
+    <img src="../images/fabric-construction/closeups2.jpg" alt="Closeup 2"/>
+    <!-- Row 3 -->
+    <img src="../images/fabric-construction/sample3.jpg" alt="Sample 3"/>
+    <img src="../images/fabric-construction/closeups3.jpg" alt="Closeup 3"/>
+    <!-- Row 4 -->
+    <img src="../images/fabric-construction/sample4.jpg" alt="Sample 4"/>
+    <img src="../images/fabric-construction/closeups4.jpg" alt="Closeup 4"/>
+    <!-- Row 5 -->
+    <img src="../images/fabric-construction/sample5.jpg" alt="Sample 5"/>
+    <img src="../images/fabric-construction/closeups5.jpg" alt="Closeup 5"/>
+    <!-- Row 6 -->
+    <img src="../images/fabric-construction/sample6.jpg" alt="Sample 6"/>
+    <img src="../images/fabric-construction/closeups6.jpg" alt="Closeup 6"/>
+    <!-- Row 7 -->
+    <img src="../images/fabric-construction/sample7.jpg" alt="Sample 7"/>
+    <img src="../images/fabric-construction/closeups7.jpg" alt="Closeup 7"/>
+    <!-- Row 8 -->
+    <img src="../images/fabric-construction/sample8.jpg" alt="Sample 8"/>
+    <img src="../images/fabric-construction/closeups8.jpg" alt="Closeup 8"/>
+    <!-- Row 9 -->
+    <img src="../images/fabric-construction/sample9.jpg" alt="Sample 9"/>
+    <img src="../images/fabric-construction/closeups9.jpg" alt="Closeup 9"/>
+    <!-- Row 10 -->
+    <img src="../images/fabric-construction/sample10.jpg" alt="Sample 10"/>
+    <img src="../images/fabric-construction/closeups10.jpg" alt="Closeup 10"/>
+    <!-- Row 11 -->
+    <img src="../images/fabric-construction/sample11.jpg" alt="Sample 11"/>
+    <img src="../images/fabric-construction/closeups11.jpg" alt="Closeup 11"/>
+  </div>
+</div>
+
+<!-- REFLECTION -->
+<div class="px mb48">
+  <p class="det-section mb16">Reflection</p>
+  <p class="det-body" style="max-width:600px;margin:0 auto;text-align:center;">Write about the fabric construction process — what these samples demonstrate about non-woven fabric making, how the dragonfly wing inspired the textures, and what you would develop further.</p>
+</div>
+
+<!-- LOGO / FOOTER -->
+<div class="px pb80" style="text-align:center;">
+  <p style="font-family:var(--serif);font-size:20px;font-weight:300;letter-spacing:0.04em;">Alma Rachel Ipe</p>
+  <p style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-top:4px;">National Institute of Design</p>
+</div>
+
+<!-- NEXT PROJECT -->
 <div class="det-next">
   <div><p class="next-sm">Next Project</p><a class="next-nm" href="embroidery.html">Embroidery →</a></div>
   <a class="next-ar" href="embroidery.html">→</a>
 </div>
+
 </body>
 </html>
