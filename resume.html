@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resume — Alma Rachel Ipe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+@page{size:A4;margin:0;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Inter',sans-serif;font-weight:300;font-size:10px;
+  color:#1a1a1a;background:#fff;
+  width:210mm;min-height:297mm;margin:0 auto;
+  display:grid;grid-template-columns:200px 1fr;
+}
+/* LEFT COLUMN */
+.left{
+  background:#1a1a1a;color:#ffffff;padding:40px 28px;
+  display:flex;flex-direction:column;gap:32px;
+}
+.photo{
+  width:144px;height:144px;border-radius:50%;object-fit:cover;
+  border:3px solid #ffffff;align-self:center;
+}
+.left h3{
+  font-family:'Cormorant Garamond',serif;font-weight:400;font-size:13px;
+  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px;
+  border-bottom:1px solid #444;padding-bottom:6px;
+}
+.left p,.left li{font-size:9.5px;line-height:1.7;color:#ccc;}
+.left ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.left ul li::before{content:"—  ";color:#888;}
+.skill-bar-wrap{margin-top:4px;}
+.skill-item{margin-bottom:8px;}
+.skill-label{font-size:9px;letter-spacing:0.08em;margin-bottom:3px;color:#ccc;}
+.skill-bar{height:3px;background:#444;border-radius:2px;}
+.skill-fill{height:100%;background:#fff;border-radius:2px;}
+.lang-item{display:flex;justify-content:space-between;font-size:9.5px;color:#ccc;margin-bottom:4px;}
+.lang-level{color:#888;font-size:8px;letter-spacing:0.05em;}
+
+/* RIGHT COLUMN */
+.right{padding:40px 36px;display:flex;flex-direction:column;gap:28px;}
+.name{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;line-height:1;}
+.title{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#888;margin-top:6px;}
+.contact-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:8px;}
+.contact-item{font-size:9px;color:#666;letter-spacing:0.04em;}
+.contact-item a{color:#1a1a1a;text-decoration:none;}
+.right h3{
+  font-family:'Cormorant Garamond',serif;font-weight:400;font-size:13px;
+  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px;
+  border-bottom:1px solid #ddd;padding-bottom:6px;color:#1a1a1a;
+}
+.edu-item{margin-bottom:16px;}
+.edu-year{font-size:9px;font-weight:500;letter-spacing:0.08em;color:#888;}
+.edu-name{font-size:11px;font-weight:400;margin-top:2px;}
+.edu-place{font-size:9.5px;color:#666;margin-top:1px;}
+.about-text{font-size:10px;line-height:1.85;color:#444;}
+.interests{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;}
+.interest-tag{
+  font-size:8.5px;letter-spacing:0.1em;text-transform:uppercase;
+  border:1px solid #ddd;padding:4px 10px;color:#666;
+}
+
+@media print{
+  body{width:210mm;min-height:297mm;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<!-- LEFT COLUMN -->
+<div class="left">
+  <img class="photo" src="images/about/about.jpg" alt="Alma Rachel Ipe"/>
+
+  <div>
+    <h3>Skills</h3>
+    <div class="skill-bar-wrap">
+      <div class="skill-item"><div class="skill-label">Weaving</div><div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div></div>
+      <div class="skill-item"><div class="skill-label">Fabric Manipulation</div><div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div></div>
+      <div class="skill-item"><div class="skill-label">Pattern Drafting</div><div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div></div>
+      <div class="skill-item"><div class="skill-label">Print Development</div><div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div></div>
+      <div class="skill-item"><div class="skill-label">Surface Development</div><div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div></div>
+      <div class="skill-item"><div class="skill-label">Photography</div><div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div></div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Software</h3>
+    <ul>
+      <li>Adobe Photoshop</li>
+      <li>Adobe Illustrator</li>
+      <li>Adobe InDesign</li>
+      <li>Procreate</li>
+      <li>VS Code</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Languages</h3>
+    <div class="lang-item"><span>English</span><span class="lang-level">Fluent</span></div>
+    <div class="lang-item"><span>Hindi</span><span class="lang-level">Fluent</span></div>
+    <div class="lang-item"><span>Malayalam</span><span class="lang-level">Native</span></div>
+  </div>
+
+  <div>
+    <h3>Interests</h3>
+    <ul>
+      <li>Photography</li>
+      <li>Material Research</li>
+      <li>Craft & Making</li>
+    </ul>
+  </div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div class="right">
+  <div>
+    <h1 class="name">Alma Rachel Ipe</h1>
+    <p class="title">Textile & Apparel Design</p>
+    <div class="contact-row">
+      <span class="contact-item"><a href="mailto:almarachelipe@gmail.com">almarachelipe@gmail.com</a></span>
+      <span class="contact-item"><a href="https://instagram.com/_rahael___" target="_blank">@_rahael___</a></span>
+      <span class="contact-item"><a href="https://almarachelipe.github.io/almarachelipe/" target="_blank">Portfolio</a></span>
+    </div>
+  </div>
+
+  <div>
+    <h3>About</h3>
+    <p class="about-text">I am a third year Textile and Apparel Design student at the National Institute of Design, Andhra Pradesh. My practice sits at the intersection of material research, craft, and design — with a particular interest in understanding what fibres can become beyond their conventional applications. I am drawn to processes that are slow and considered — weaving, embroidery, surface design — and to the questions that emerge when you work closely with material.</p>
+  </div>
+
+  <div>
+    <h3>Education</h3>
+    <div class="edu-item">
+      <span class="edu-year">2023 — Present</span>
+      <p class="edu-name">B.Des Textile & Apparel Design</p>
+      <p class="edu-place">National Institute of Design, Andhra Pradesh</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">CBSE</span>
+      <p class="edu-name">Higher Secondary Education</p>
+      <p class="edu-place">Bharatiya Vidya Bhavan, Wayanad</p>
+    </div>
+  </div>
+
+  <div>
+    <h3>Academic Projects</h3>
+    <div class="edu-item">
+      <span class="edu-year">Woven Design Project</span>
+      <p class="edu-name">Matka Woven Design</p>
+      <p class="edu-place">Handwoven Tussar silk fabric using dobby weave with gindle cotton gradation. Zero waste pattern. Group project with Chittoor artisans.</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">Advanced Weaving</span>
+      <p class="edu-name">Blue Damsel</p>
+      <p class="edu-place">Wadded double cloth weaving with zari threads, inspired by the blue damselfly's iridescence.</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">Basic Weaving</span>
+      <p class="edu-name">Scarlet & Sage</p>
+      <p class="edu-place">Foundation weave structures — plain, twill, satin, basket — using a colour palette derived from the plum-headed parakeet.</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">Fabric Construction</span>
+      <p class="edu-name">Blue Damsel</p>
+      <p class="edu-place">Fabric manipulation using organza and silk — layering and stitching techniques inspired by damselfly wing structures.</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">Surface Development</span>
+      <p class="edu-name">Embroidery</p>
+      <p class="edu-place">Running stitch exploration — investigating repetition, direction, density and scale to create varied surface textures.</p>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year">Apparel Design</span>
+      <p class="edu-name">Cocktail Dress</p>
+      <p class="edu-place">Cotton cocktail dress with princess cut, cowl neck, and ikat detail — pattern drafted and constructed from scratch.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
