@@ -36,9 +36,11 @@ img{display:block;width:100%;object-fit:cover;}
 @media(max-width:768px){
   :root{--pad:24px;}
   .det-h1{font-size:26px;}
-  .g2,.stripe-group{grid-template-columns:1fr;}
+  .g2,.g3,.stripe-group{grid-template-columns:1fr;}
   .brief-row{flex-direction:column !important;}
   .brief-text,.brief-img{max-width:100% !important;width:100% !important;}
+  [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+  [style*="display:flex"][style*="gap:32px"]{flex-direction:column !important;}
   .det-next{padding:40px 24px 60px;}
 }
 </style>

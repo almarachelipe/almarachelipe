@@ -36,9 +36,9 @@ img{display:block;width:100%;object-fit:cover;}
 @media(max-width:768px){
   :root{--pad:24px;}
   .det-h1{font-size:26px;}
-  .g2,.sample-grid{grid-template-columns:1fr;}
-  .g3{grid-template-columns:1fr 1fr;}
+  .g2,.g3,.sample-grid{grid-template-columns:1fr;}
   .brief-row{flex-direction:column !important;}
+  [style*="display:flex"][style*="gap"]{flex-direction:column !important;}
   .det-next{padding:40px 24px 60px;}
 }
 </style>
