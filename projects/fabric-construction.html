@@ -7,7 +7,7 @@
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:200px;--gap:10px;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:12px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:14px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 .proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
@@ -17,7 +17,7 @@ img{display:block;width:100%;object-fit:cover;}
 .det-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);}
 .det-h1{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1.05;letter-spacing:0.01em;}
 .det-sub{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:6px;}
-.det-body{font-size:12px;line-height:1.95;color:#444;}
+.det-body{font-size:14px;line-height:1.95;color:#444;}
 .det-section{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
 .px{padding:0 var(--pad);}
 .mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}
@@ -61,24 +61,22 @@ img{display:block;width:100%;object-fit:cover;}
   <p class="det-sub">FABRIC CONSTRUCTION</p>
 </div>
 
-<!-- BRIEF + INSPIRATION -->
-<div class="px mb32">
-  <div class="brief-row" style="display:flex;gap:40px;align-items:flex-start;">
-    <div style="flex:1;max-width:50%;">
-      <p class="det-section mb8">About the Project</p>
-      <p class="det-body">This project was an exploration of fabric construction techniques, investigating how different fabrics and methods of manipulation can be combined to evoke a specific visual and tactile quality. The blue damselfly served as the creative inspiration. Its signature iridescence, delicacy and translucency becoming the benchmark against which every fabric and technique choice was measured.</p>
-    </div>
-    <div style="display:flex;gap:16px;align-items:flex-start;">
-      <img src="../images/fabric-construction/dragonfly.jpg" alt="Dragonfly — Inspiration" style="width:140px;aspect-ratio:3/4;object-fit:cover;flex-shrink:0;"/>
-      <img src="../images/fabric-construction/dragonfly3.jpg" alt="Dragonfly Eye — Macro" style="width:140px;aspect-ratio:3/4;object-fit:cover;flex-shrink:0;"/>
-    </div>
-  </div>
+<!-- ABOUT -->
+<div class="px mb48">
+  <p class="det-section mb8">About the Project</p>
+  <p class="det-body" style="max-width:720px;">This project was an exploration of fabric construction techniques, investigating how different fabrics and methods of manipulation can be combined to evoke a specific visual and tactile quality. The blue damselfly served as the creative inspiration. Its signature iridescence, delicacy and translucency becoming the benchmark against which every fabric and technique choice was measured.</p>
 </div>
 
 <!-- INSPIRATION -->
-<div class="px mb32">
+<div class="px mb24">
   <p class="det-section mb8">Inspiration</p>
-  <p class="det-body" style="max-width:600px;">The blue damselfly is celebrated for its ethereal, iridescent wings that seem to shift and shimmer with every movement. Capturing this elusive quality in fabric form was the central challenge of the project, translating the visual magic of the damselfly into tangible textile samples.</p>
+  <p class="det-body" style="max-width:720px;">The blue damselfly is celebrated for its ethereal, iridescent wings that seem to shift and shimmer with every movement. Capturing this elusive quality in fabric form was the central challenge of the project, translating the visual magic of the damselfly into tangible textile samples.</p>
+</div>
+<div class="px mb48">
+  <div class="brief-row" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;">
+    <img src="../images/fabric-construction/dragonfly.jpg" alt="Blue damselfly" style="width:100%;aspect-ratio:4/5;object-fit:cover;"/>
+    <img src="../images/fabric-construction/dragonfly3.jpg" alt="Damselfly wing — macro" style="width:100%;aspect-ratio:4/5;object-fit:cover;"/>
+  </div>
 </div>
 
 <!-- BRIEF -->
