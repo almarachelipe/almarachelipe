@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Resume — Alma Rachel Ipe</title>
+<title>Resume, Alma Rachel Ipe</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 @page{size:A4;margin:0;}
@@ -62,12 +62,25 @@ body{
   border:1px solid #ddd;padding:4px 10px;color:#666;
 }
 
+.download-btn{
+  position:fixed;top:20px;right:20px;z-index:1000;
+  background:#1a1a1a;color:#fff;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-weight:400;font-size:11px;
+  letter-spacing:0.15em;text-transform:uppercase;
+  padding:12px 20px;border-radius:0;
+  transition:opacity 0.2s;
+}
+.download-btn:hover{opacity:0.75;}
+
 @media print{
   body{width:210mm;height:297mm;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .download-btn{display:none;}
 }
 </style>
 </head>
 <body>
+
+<button class="download-btn" onclick="window.print()">Download as PDF</button>
 
 <!-- LEFT COLUMN -->
 <div class="left">
