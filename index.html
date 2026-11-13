@@ -48,6 +48,12 @@ img{display:block;width:100%;object-fit:cover;}
 .home-see-work{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:0.15em;text-transform:lowercase;display:block;cursor:pointer;transition:opacity 0.2s;}
 .home-see-work:hover{opacity:0.6;}
 
+/* ── STATEMENT ── */
+#statement{padding:150px var(--pad) 130px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.statement-hi{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:36px;}
+.statement-line{font-family:var(--serif);font-weight:300;font-style:italic;font-size:38px;line-height:1.35;max-width:860px;}
+.statement-roles{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:40px;line-height:2.2;max-width:860px;}
+
 /* ── WORK ── */
 #work{padding-top:0;}
 .work-bar{position:sticky;top:64px;z-index:400;background:var(--white);width:100%;height:80px;padding:12px var(--pad) 10px;display:flex;flex-direction:column;justify-content:space-between;}
@@ -67,7 +73,7 @@ img{display:block;width:100%;object-fit:cover;}
 .project-name{font-family:var(--serif);font-weight:300;font-size:22px;margin-bottom:4px;line-height:1.3;}
 .project-course{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin-bottom:10px;}
 .project-desc{font-size:15px;line-height:1.85;color:#666;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
-.vp{font-size:10px;letter-spacing:0.1em;color:var(--black);text-transform:lowercase;border-bottom:1px solid var(--black);padding-bottom:1px;display:inline-block;transition:opacity 0.2s;}
+.vp{font-size:10px;letter-spacing:0.1em;color:var(--black);text-transform:lowercase;border-bottom:1px solid var(--black);padding-bottom:1px;display:inline-block;align-self:flex-start;transition:opacity 0.2s;}
 .vp:hover{opacity:0.5;}
 
 /* ── ABOUT ── */
@@ -77,6 +83,11 @@ img{display:block;width:100%;object-fit:cover;}
 .about-photo{width:460px;height:520px;flex-shrink:0;background:var(--grey);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:10px;letter-spacing:0.1em;}
 .about-text h2{font-family:var(--serif);font-weight:300;font-size:28px;margin-bottom:20px;line-height:1.2;}
 .about-text p{font-size:16px;line-height:1.95;color:#444;max-width:460px;}
+.about-text p.about-close{font-family:var(--serif);font-style:italic;font-weight:300;font-size:24px;line-height:1.45;color:var(--black);}
+.about-details{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;margin-top:90px;padding-top:48px;border-top:1px solid #ebebeb;}
+.about-details h4{font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:22px;}
+.about-details li{list-style:none;font-size:15px;line-height:1.6;color:#444;margin-bottom:16px;}
+.about-details li span{display:block;font-size:13px;color:var(--mid);}
 
 /* ── CONNECT ── */
 #connect{padding:100px var(--pad) 120px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:1px solid #ebebeb;}
@@ -104,6 +115,9 @@ img{display:block;width:100%;object-fit:cover;}
   .about-photo{width:100%;height:auto;max-height:400px;}
   .about-text p{max-width:100%;}
   .about-text h2{text-align:center;}
+  .about-details{grid-template-columns:1fr;gap:40px;margin-top:56px;}
+  #statement{padding:90px 24px 80px;}
+  .statement-line{font-size:27px;}
   #connect{padding:80px 24px 100px;}
   .connect-links{flex-direction:column;align-items:center;gap:24px;}
 }
@@ -154,6 +168,13 @@ img{display:block;width:100%;object-fit:cover;}
     <span class="home-collection" id="homeCollectionName">Woven Design Project</span>
     <span class="home-see-work" onclick="scrollToCurrentProject()">see work</span>
   </div>
+</section>
+
+<!-- STATEMENT -->
+<section id="statement">
+  <p class="statement-hi">Hi, I'm Alma</p>
+  <p class="statement-line">There is something deeply satisfying about watching a textile take shape one pick at a time.</p>
+  <p class="statement-roles">Textile &amp; Apparel Design &nbsp;/&nbsp; Weaving &nbsp;/&nbsp; Surface Development &nbsp;/&nbsp; Material Research</p>
 </section>
 
 <!-- WORK -->
@@ -294,9 +315,35 @@ img{display:block;width:100%;object-fit:cover;}
     <div class="about-text">
       <h2>Alma Rachel Ipe</h2>
       <p>I am a fourth year Textile and Apparel Design student at the National Institute of Design, Andhra Pradesh. What draws me most to textiles is the patience and process behind it all.</p><br/>
-      <p>Weaving holds a special place in my practice. There is something deeply satisfying about watching a textile take shape one pick at a time. But I am equally curious about every other part of the textile design process, from surface development to pattern drafting to apparel construction.</p><br/>
+      <p>My practice sits at the intersection of material research, craft, and design, with a particular interest in understanding what fibres can become beyond their conventional applications. Weaving holds a special place in it, but I am equally curious about every other part of the textile design process, from surface development to pattern drafting to apparel construction.</p><br/>
       <p>Beyond the studio I am someone who loves being on the move, whether it is hiking through new landscapes or seeking out craft communities and learning how things are made by hand. I bring that same curiosity and energy into my design practice.</p><br/>
-      <p>I want to be a designer who creates with intention, where every material choice, every structure and every detail has a reason behind it.</p>
+      <p class="about-close">I want to be a designer who creates with intention, where every material choice, every structure and every detail has a reason behind it.</p>
+    </div>
+  </div>
+  <div class="about-details">
+    <div>
+      <h4>Education</h4>
+      <ul>
+        <li>B.Des Textile &amp; Apparel Design<span>National Institute of Design, Andhra Pradesh, 2023 to present</span></li>
+        <li>Higher Secondary Education<span>Bharatiya Vidya Bhavan, Wayanad</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Experience</h4>
+      <ul>
+        <li>Installation Design, 2nd Convocation<span>NID Andhra Pradesh, 2024</span></li>
+        <li>Onam Merch, Team Lead<span>NID Andhra Pradesh, 2024</span></li>
+        <li>Exhibition Design, Chitrakatha Design Festival<span>NID Andhra Pradesh, 2023</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Interests</h4>
+      <ul>
+        <li>Photography</li>
+        <li>Material Research</li>
+        <li>Craft &amp; Making</li>
+        <li>Hiking</li>
+      </ul>
     </div>
   </div>
 </section>
