@@ -62,3 +62,16 @@ body>div img,body>img{cursor:zoom-in;}
   body>img,body>div:not(.px):not(.proj-nav):not(.det-next):not(.lightbox):not(.thread):not([style*="var(--pad)"]){max-width:1040px;margin-left:auto;margin-right:auto;}
   body>.px[style*="padding-left:60px"]{padding-left:var(--pad) !important;padding-right:var(--pad) !important;}
 }
+
+/* calmer photos: on pages marked calm-media, picture-only blocks sit in a narrower 640px column; text keeps the 1040px column */
+@media(min-width:769px){
+  body.calm-media{--media-pad:max(var(--pad),calc((100vw - 640px)/2));}
+  body.calm-media>.px:has(img):not(:has(.det-body)):not(.wide-set):not([style*="max-width"]){padding-left:var(--media-pad) !important;padding-right:var(--media-pad) !important;}
+  body.calm-media>img,body.calm-media>div:not(.px):not([style*="var(--pad)"]):has(img):not(:has(.det-body)){max-width:640px;}
+  body.calm-media>.px[style*="max-width"]:has(img){padding-left:0 !important;padding-right:0 !important;max-width:620px !important;}
+  body.calm-media .center-img img{max-height:min(600px,78vh) !important;}
+}
+
+/* colour palette swatches: sized to sit with the chapter headings */
+.swatch{width:clamp(44px,7vw,96px) !important;height:clamp(44px,7vw,96px) !important;aspect-ratio:1;flex:none;}
+div:has(>.swatch){gap:12px !important;flex-wrap:wrap;}

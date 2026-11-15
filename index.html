@@ -42,7 +42,7 @@ img{display:block;width:100%;object-fit:cover;}
 .video-slide.active{opacity:1;}
 .video-slide video{width:100%;height:100%;object-fit:cover;display:block;}
 .video-slide .color-bg{width:100%;height:100%;}
-.home-overlay{color:#ffffff !important;}
+.home-overlay{color:#ffffff !important;text-shadow:0 1px 12px rgba(0,0,0,0.55);}
 .home-overlay{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);text-align:center;pointer-events:all;white-space:nowrap;}
 .home-collection{font-family:var(--serif);font-weight:300;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:10px;display:block;}
 .home-see-work{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:0.15em;text-transform:lowercase;display:block;cursor:pointer;transition:opacity 0.2s;}
@@ -55,7 +55,7 @@ img{display:block;width:100%;object-fit:cover;}
 .statement-roles{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:40px;line-height:2.2;max-width:860px;}
 
 /* ── WORK ── */
-#work{padding-top:0;}
+#work{padding-top:56px;}
 .work-bar{position:sticky;top:64px;z-index:400;background:var(--white);width:100%;height:112px;padding:14px var(--pad) 14px;display:flex;flex-direction:column;justify-content:space-between;}
 .work-bar-title{font-family:var(--serif);font-weight:300;font-size:34px;padding-top:8px;letter-spacing:0.02em;line-height:1;}
 .work-bar-tabs{display:flex;gap:40px;}
@@ -66,10 +66,10 @@ img{display:block;width:100%;object-fit:cover;}
 .project-row{display:flex;align-items:center;gap:48px;margin-bottom:54px;cursor:pointer;text-decoration:none;color:inherit;}
 .project-row.img-right{flex-direction:row;}
 .project-row.img-left{flex-direction:row-reverse;}
-.project-img{width:60%;flex-shrink:0;overflow:hidden;}
+.project-img{width:52%;flex-shrink:0;overflow:hidden;}
 .project-img img{aspect-ratio:4/3;transition:transform 0.6s ease;background:var(--grey);}
 .project-row:hover .project-img img{transform:scale(1.02);}
-.project-text{width:40%;display:flex;flex-direction:column;justify-content:flex-end;align-self:flex-end;padding-bottom:8px;}
+.project-text{width:48%;display:flex;flex-direction:column;justify-content:flex-end;align-self:flex-end;padding-bottom:8px;}
 .project-name{font-family:var(--serif);font-weight:300;font-size:22px;margin-bottom:4px;line-height:1.3;}
 .project-course{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin-bottom:10px;}
 .project-desc{font-size:15px;line-height:1.85;color:#666;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
@@ -100,6 +100,7 @@ img{display:block;width:100%;object-fit:cover;}
 .connect-item a:hover{border-bottom-color:var(--black);}
 
 /* ── MOBILE ── */
+@media(min-width:769px){.work-group .project-row{max-width:1000px;margin-left:auto;margin-right:auto;gap:56px;margin-bottom:88px;}.project-desc{-webkit-line-clamp:5;}.project-row.img-left .project-text{margin-right:auto;}}
 @media(max-width:768px){
   :root{--pad:24px;}
   #site-nav{padding:18px 24px;}
@@ -157,16 +158,14 @@ img{display:block;width:100%;object-fit:cover;}
   <div class="video-slide" data-tone="light" data-label="Basic Weaving" data-anchor="row-basic-weaving">
     <video muted playsinline loop preload="none" poster="videos/hero5.jpg" data-src="videos/hero5-hq.mp4"></video>
   </div>
+  <div class="video-slide" data-tone="light" data-label="Ikat" data-anchor="row-ikat">
+    <video muted playsinline loop preload="none" poster="videos/hero7.jpg" data-src="videos/hero7-hq.mp4"></video>
+  </div>
 
   <div class="home-overlay" id="homeOverlay">
     <span class="home-collection" id="homeCollectionName">Woven Design Project</span>
     <span class="home-see-work" onclick="scrollToCurrentProject()">see work</span>
   </div>
-</section>
-
-<!-- STATEMENT -->
-<section id="statement">
-  <p class="statement-line">There is something deeply satisfying about watching a textile take shape one pick at a time.</p>
 </section>
 
 <!-- WORK -->
@@ -212,6 +211,17 @@ img{display:block;width:100%;object-fit:cover;}
       </div>
       <div class="project-img"><img loading="lazy" decoding="async" src="images/home-thumbs/basic-weaving.jpg" alt="Basic Weaving"/></div>
     </a>
+    <!-- IKAT ROW: hidden until the Ikat page is approved
+    <a class="project-row img-left" id="row-ikat" href="projects/ikat.html">
+      <div class="project-text">
+        <h3 class="project-name">Ikat</h3>
+        <p class="project-course">Ikat Stole</p>
+        <p class="project-desc">One stole woven in seven structures, shown end to end so each section can be read on its own.</p>
+        <span class="vp">view project</span>
+      </div>
+      <div class="project-img"><img loading="lazy" decoding="async" src="images/home-thumbs/ikat.jpg" alt="Ikat"/></div>
+    </a>
+    -->
   </div>
 
   <!-- PRINT -->
@@ -397,7 +407,16 @@ function loadRest(){
 const firstVid=slides[0].querySelector('video');
 if(firstVid.readyState>=3)loadRest();else firstVid.addEventListener('canplay',loadRest,{once:true});
 setTimeout(loadRest,4000);
-setInterval(()=>showSlide(cur+1),3500);
+// each clip plays once to its own end, then the next one starts (no fixed timer, so a short clip never restarts)
+slides.forEach((sl,i)=>{
+  const v=sl.querySelector('video');
+  v.loop=false;
+  v.addEventListener('ended',()=>{
+    if(i!==cur)return;
+    showSlide(cur+1);
+    if(cur===i){v.currentTime=0;v.play().catch(()=>{});} // next clip not ready: replay this one from the start
+  });
+});
 const homeEl=document.getElementById('home');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>homeEl.offsetHeight-60){
