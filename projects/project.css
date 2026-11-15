@@ -55,3 +55,10 @@ body>div img,body>img{cursor:zoom-in;}
   .det-body.lead{font-size:17px;}
 }
 @media(prefers-reduced-motion:reduce){.reveal,.band{opacity:1;translate:0 0;transform:none;transition:none;}}
+
+/* calm column: content never wider than about 1040px, nothing runs edge to edge */
+@media(min-width:769px){
+  :root{--pad:max(48px,calc((100vw - 1040px)/2));}
+  body>img,body>div:not(.px):not(.proj-nav):not(.det-next):not(.lightbox):not(.thread):not([style*="var(--pad)"]){max-width:1040px;margin-left:auto;margin-right:auto;}
+  body>.px[style*="padding-left:60px"]{padding-left:var(--pad) !important;padding-right:var(--pad) !important;}
+}

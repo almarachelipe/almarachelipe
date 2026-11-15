@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kaldi Process, Alma Rachel Ipe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:40px;--gap:10px;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;object-fit:cover;}
+.proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
+.proj-back{font-size:11px;letter-spacing:0.08em;color:var(--black);transition:opacity 0.2s;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.proj-back:hover{opacity:0.5;}
+.proj-site-name{font-family:var(--serif);font-weight:300;font-size:16px;letter-spacing:0.04em;}
+.det-tag{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);}
+.det-h1{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1.05;letter-spacing:0.01em;}
+.det-sub{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:6px;}
+.det-body{font-size:16px;line-height:1.95;color:#444;}
+.det-section{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
+.px{padding:0 var(--pad);}
+.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}.mb0{margin-bottom:0;}
+.pb80{padding-bottom:80px;}.pt32{padding-top:32px;}
+.fw{width:100%;display:block;object-fit:cover;}
+.cap{font-size:12px;color:var(--mid);letter-spacing:0.05em;line-height:1.5;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
+.det-next{border-top:1px solid #ebebeb;padding:48px var(--pad) 80px;display:flex;justify-content:space-between;align-items:center;}
+.next-sm{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
+.next-nm{font-family:var(--serif);font-weight:300;font-size:24px;transition:opacity 0.2s;text-decoration:none;display:block;}
+.next-nm:hover{opacity:0.5;}
+.next-ar{font-size:22px;transition:transform 0.2s;text-decoration:none;}
+.next-ar:hover{transform:translateX(5px);}
+.page-img{width:100%;object-fit:contain;background:var(--white);border:1px solid #ebebeb;}
+.sub-sect{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#666;font-weight:400;margin-top:24px;margin-bottom:8px;}
+@media(max-width:768px){:root{--pad:24px;}.det-h1{font-size:26px;}.g2,.g3,.g4{grid-template-columns:1fr;}.det-next{padding:40px 24px 60px;}
+  [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+}</style>
+<link rel="stylesheet" href="project.css"/>
+<style>:root{--band:url(../images/advanced-print/k-palette-131.jpg);}
+.hero-in{margin:28px 0 8px;padding:0 var(--pad);max-width:none !important;}
+.row{display:flex;gap:36px;align-items:flex-start;margin:0 auto 36px 0;}
+.scale{display:flex;gap:7%;align-items:flex-end;margin:10px 0 44px;}
+.scale figure{margin:0;flex:none;width:calc(var(--w)*4.3%);}
+.scale img{width:100%;height:auto;object-fit:contain;cursor:zoom-in;}
+.scale figcaption{font-size:12px;color:var(--mid);letter-spacing:0.04em;line-height:1.5;margin-top:10px;}
+.scale-note{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.scale img.reveal{opacity:1 !important;translate:none !important;}
+.row figure{min-width:0;margin:0;}
+.row img{width:100%;height:auto;object-fit:contain;cursor:zoom-in;}
+.row figcaption{font-size:12px;color:var(--mid);letter-spacing:0.04em;line-height:1.5;margin-top:8px;}
+.row.line img{border:1px solid #ececea;}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);max-width:980px;gap:22px 40px;margin-top:8px;}
+.facts dt{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.facts dd{font-size:15px;line-height:1.7;color:#444;}
+.trial{font-size:14px;line-height:1.75;color:#444;margin-top:10px;}
+.trial b{font-weight:400;color:var(--black);letter-spacing:0.04em;}
+.sub-sect{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);margin:26px 0 12px;}
+.row img.reveal{opacity:1 !important;translate:none !important;}
+.credits dl .proc-mini{margin-left:auto;text-align:right;}
+.credits .proc-mini a{border-bottom:1px solid #bbb;padding-bottom:2px;transition:border-color .2s;}
+.credits .proc-mini a:hover{border-color:#1a1a1a;}
+.credits dl{display:flex !important;flex-wrap:wrap;gap:28px 48px;}
+@media(max-width:768px){.credits dl .proc-mini{margin-left:0;text-align:left;}}
+.proc-link{display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid #1a1a1a;padding:26px 30px;margin-top:64px;transition:background .25s,color .25s;}
+.proc-link:hover{background:#1a1a1a;color:#fff;}
+.proc-link small{display:block;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;opacity:.6;margin-bottom:6px;}
+.proc-link span.t{font-family:var(--serif);font-size:28px;line-height:1.2;}
+.proc-link span.a{font-size:24px;}
+@media(max-width:768px){.scale{flex-direction:column;align-items:flex-start;gap:26px;}.scale figure{width:calc(var(--w)*11%);}.row{gap:22px;}.facts{grid-template-columns:1fr;}.row{flex-direction:column;max-width:none !important;}.row figure{flex:none !important;width:100%;}}
+</style>
+</head>
+<body>
+
+<div class="proj-nav">
+  <a class="proj-back" href="../index.html">← All Work</a>
+  <span class="proj-site-name">Alma Rachel Ipe</span>
+</div>
+
+<div class="px pt32 mb32">
+  <p class="det-tag mb8">Process</p>
+  <h1 class="det-h1">Kaldi</h1>
+  <p class="det-sub mb16">From carved cutlery to printed cloth</p>
+  <p class="det-body">How the wooden cutlery of Udayagiri was studied, drawn, taken apart into motifs and built back up into a collection ready for screen printing.</p>
+</div>
+
+<div class="px mb8"><p class="det-section">The Craft: Udayagiri Wooden Cutlery</p></div>
+<div class="px mb32"><p class="det-body">Believed to have originated in the 14th century, the wooden cutlery craft of Udayagiri, a small town in the Nellore district of Andhra Pradesh, is known for its intricately hand carved spoons, forks, knives and bowls. It flourished under royal patronage, particularly under the Nawabs of Arcot in the 19th century, and what began as a utilitarian practice became an art form that turned everyday objects into pieces of refined elegance.</p><br/><p class="det-body">Each piece blends Persian influenced motifs with local craftsmanship. The artisans carve soft woods from nearby forests using only simple hand tools, and over centuries have mastered the balance between function, durability and ornament. Today both men and women continue to preserve and renew the craft.</p></div>
+<div class="px"><div class="row" style="max-width:1150px">
+  <figure style="flex:0.880"><img src="../images/advanced-print/k-cutlery.jpg" width="1114" height="1266" alt=""/></figure>
+  <figure style="flex:1.154"><img src="../images/advanced-print/k-map.jpg" width="900" height="780" alt="Udayagiri, Nellore district, Andhra Pradesh"/><figcaption>Udayagiri, Nellore district, Andhra Pradesh</figcaption></figure>
+</div></div>
+<div class="px"><div class="row" style="max-width:670px">
+  <figure style="flex:1.047"><img src="../images/advanced-print/k-craft.jpg" width="1335" height="1275" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Sketches</p></div>
+<div class="px mb32"><p class="det-body">The cutlery was first drawn by hand, piece by piece, to understand the silhouette of each spoon and fork and the ornament carved along each handle.</p></div>
+<div class="px"><div class="row" style="max-width:1196px">
+  <figure style="flex:1.431"><img src="../images/advanced-print/k-p064.jpg" width="1342" height="938" alt=""/></figure>
+  <figure style="flex:1.398"><img src="../images/advanced-print/k-p065.jpg" width="1370" height="980" alt=""/></figure>
+</div></div>
+<div class="px"><div class="row" style="max-width:1170px">
+  <figure style="flex:1.392"><img src="../images/advanced-print/k-p066.jpg" width="1296" height="931" alt=""/></figure>
+  <figure style="flex:1.373"><img src="../images/advanced-print/k-p067.jpg" width="1352" height="985" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Rendering Styles</p></div>
+<div class="px mb32"><p class="det-body">The same pieces were rendered in several ways, from solid silhouette to wood grain to stipple, to see how each treatment changes the weight of the motif on a surface.</p></div>
+<div class="px"><div class="row" style="max-width:1273px">
+  <figure style="flex:1.470"><img src="../images/advanced-print/k-p068.jpg" width="1323" height="900" alt=""/></figure>
+  <figure style="flex:1.277"><img src="../images/advanced-print/k-p069.jpg" width="1251" height="980" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Motif Library</p></div>
+<div class="px mb32"><p class="det-body">The carving was then taken apart. Every ornament on the handles was redrawn as a separate line motif, giving a library to build repeats, borders and grounds from.</p></div>
+<div class="px"><div class="row" style="max-width:1455px">
+  <figure style="flex:1.327"><img src="../images/advanced-print/k-p070.jpg" width="1600" height="1206" alt=""/></figure>
+  <figure style="flex:1.452"><img src="../images/advanced-print/k-p071.jpg" width="1600" height="1102" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Wallpaper Iterations</p></div>
+<div class="px mb32"><p class="det-body">The wallpaper was the first product explored. Iterations moved from tight arrangements of whole cutlery, through positive and negative blocks, to a looser falling layout with a patterned ground.</p></div>
+<div class="px"><div class="row" style="max-width:1212px">
+  <figure style="flex:1.071"><img src="../images/advanced-print/k-p072.jpg" width="1312" height="1225" alt=""/></figure>
+  <figure style="flex:1.073"><img src="../images/advanced-print/k-p073.jpg" width="1315" height="1225" alt=""/></figure>
+</div></div>
+<div class="px"><div class="row" style="max-width:1381px">
+  <figure style="flex:1.217"><img src="../images/advanced-print/k-p076.jpg" width="1600" height="1315" alt=""/></figure>
+  <figure style="flex:1.420"><img src="../images/advanced-print/k-p077.jpg" width="1600" height="1127" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Texture and Colour</p></div>
+<div class="px mb32"><p class="det-body">Textures made in different mediums were laid under the motif, first in grey and then in the browns of the wood itself, to test how much surface the ground could carry before it competed with the cutlery.</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:4.244"><img src="../images/advanced-print/k-p078.jpg" width="1600" height="377" alt="Textures derived through different mediums"/><figcaption>Textures derived through different mediums</figcaption></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.081"><img src="../images/advanced-print/k-p079.jpg" width="1381" height="1277" alt=""/></figure>
+  <figure style="flex:1.084"><img src="../images/advanced-print/k-p080.jpg" width="1389" height="1281" alt=""/></figure>
+  <figure style="flex:1.086"><img src="../images/advanced-print/k-p081.jpg" width="1383" height="1274" alt=""/></figure>
+</div></div>
+<div class="px"><div class="row" style="max-width:1220px">
+  <figure style="flex:1.086"><img src="../images/advanced-print/k-p082.jpg" width="1388" height="1278" alt=""/></figure>
+  <figure style="flex:1.073"><img src="../images/advanced-print/k-p083.jpg" width="1371" height="1278" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Repeats from the Motif Library</p></div>
+<div class="px mb32"><p class="det-body">The line motifs were put into repeat as small all over patterns, to serve as grounds and coordinates for the rest of the collection.</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.540"><img src="../images/advanced-print/k-p084.jpg" width="1600" height="1039" alt=""/></figure>
+  <figure style="flex:1.538"><img src="../images/advanced-print/k-p085.jpg" width="1600" height="1040" alt=""/></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.540"><img src="../images/advanced-print/k-p086.jpg" width="1600" height="1039" alt=""/></figure>
+  <figure style="flex:1.538"><img src="../images/advanced-print/k-p087.jpg" width="1600" height="1040" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Product Iterations</p></div>
+<div class="px mb32"><p class="det-body">Each product was planned in line first: where the border sits, how heavy the centre is, and how the pieces relate to one another on a laid table.</p></div>
+<div class="px"><p class="sub-sect">Table cover</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.688"><img src="../images/advanced-print/k-p088.jpg" width="1600" height="948" alt=""/></figure>
+  <figure style="flex:1.713"><img src="../images/advanced-print/k-p089.jpg" width="1600" height="934" alt=""/></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.708"><img src="../images/advanced-print/k-p090.jpg" width="1600" height="937" alt=""/></figure>
+  <figure style="flex:1.695"><img src="../images/advanced-print/k-p091.jpg" width="1600" height="944" alt=""/></figure>
+</div></div>
+<div class="px"><p class="sub-sect">Table mat</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:2.322"><img src="../images/advanced-print/k-p092.jpg" width="1600" height="689" alt=""/></figure>
+  <figure style="flex:2.322"><img src="../images/advanced-print/k-p093.jpg" width="1600" height="689" alt=""/></figure>
+</div></div>
+<div class="px"><p class="sub-sect">Napkin</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:2.266"><img src="../images/advanced-print/k-p094.jpg" width="1600" height="706" alt=""/></figure>
+  <figure style="flex:2.276"><img src="../images/advanced-print/k-p095.jpg" width="1600" height="703" alt=""/></figure>
+</div></div>
+<div style="height:34px"></div>
+
+<div class="px mb8"><p class="det-section">Blocking for Screen Print</p></div>
+<div class="px mb32"><p class="det-body">Every design was broken down for production: the repeat unit, its size, and the number of screens needed to print it.</p></div>
+<div class="px"><div class="row">
+  <figure style="flex:2.726"><img src="../images/advanced-print/k-p118.jpg" width="1600" height="587" alt="Repeat 24 x 12 inch, 1 screen"/><figcaption>Repeat 24 x 12 inch, 1 screen</figcaption></figure>
+  <figure style="flex:2.548"><img src="../images/advanced-print/k-p119.jpg" width="1600" height="628" alt="Repeat 10 x 9 inch, 4 screens"/><figcaption>Repeat 10 x 9 inch, 4 screens</figcaption></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:2.632"><img src="../images/advanced-print/k-p120.jpg" width="1600" height="608" alt="Repeat 13 x 10 inch, 1 screen"/><figcaption>Repeat 13 x 10 inch, 1 screen</figcaption></figure>
+  <figure style="flex:2.581"><img src="../images/advanced-print/k-p121.jpg" width="1600" height="620" alt="Repeat 8.5 x 9.5 inch, 1 screen"/><figcaption>Repeat 8.5 x 9.5 inch, 1 screen</figcaption></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:2.730"><img src="../images/advanced-print/k-p122.jpg" width="1600" height="586" alt="Repeat 8 x 4 inch, 1 screen"/><figcaption>Repeat 8 x 4 inch, 1 screen</figcaption></figure>
+  <figure style="flex:2.930"><img src="../images/advanced-print/k-p123.jpg" width="1600" height="546" alt="Repeat 5 x 5 inch, 1 screen"/><figcaption>Repeat 5 x 5 inch, 1 screen</figcaption></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.928"><img src="../images/advanced-print/k-p124.jpg" width="1600" height="830" alt="Repeat 5 x 5 inch, 1 screen"/><figcaption>Repeat 5 x 5 inch, 1 screen</figcaption></figure>
+  <figure style="flex:2.025"><img src="../images/advanced-print/k-p125.jpg" width="1600" height="790" alt="Repeat 9 x 9 inch, 1 screen"/><figcaption>Repeat 9 x 9 inch, 1 screen</figcaption></figure>
+  <figure style="flex:2.000"><img src="../images/advanced-print/k-p126.jpg" width="1600" height="800" alt="Repeat 9 x 9 inch, 1 screen"/><figcaption>Repeat 9 x 9 inch, 1 screen</figcaption></figure>
+</div></div>
+<div class="px"><div class="row">
+  <figure style="flex:1.324"><img src="../images/advanced-print/k-p127.jpg" width="1589" height="1200" alt="Repeat 9 x 5 inch, 1 screen"/><figcaption>Repeat 9 x 5 inch, 1 screen</figcaption></figure>
+  <figure style="flex:1.080"><img src="../images/advanced-print/k-p128.jpg" width="1296" height="1200" alt="Repeat 9 x 5 inch, 1 screen"/><figcaption>Repeat 9 x 5 inch, 1 screen</figcaption></figure>
+  <figure style="flex:1.083"><img src="../images/advanced-print/k-p129.jpg" width="1298" height="1198" alt="Repeat 9 x 5 inch, 1 screen"/><figcaption>Repeat 9 x 5 inch, 1 screen</figcaption></figure>
+</div></div>
+
+<div class="px credits">
+  <p class="credits-h">Credits</p>
+  <dl><div><dt>Guidance</dt><dd>Arnab Senapati</dd></div></dl>
+</div>
+<div class="det-next">
+  <div><p class="next-sm">Back to the final designs</p><a class="next-nm" href="advanced-print.html">Kaldi →</a></div>
+  <a class="next-ar" href="advanced-print.html">→</a>
+</div>
+
+<script src="project.js"></script>
+</body>
+</html>

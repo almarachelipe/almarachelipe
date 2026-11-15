@@ -56,10 +56,10 @@ img{display:block;width:100%;object-fit:cover;}
 
 /* ── WORK ── */
 #work{padding-top:0;}
-.work-bar{position:sticky;top:64px;z-index:400;background:var(--white);width:100%;height:80px;padding:12px var(--pad) 10px;display:flex;flex-direction:column;justify-content:space-between;}
-.work-bar-title{font-family:var(--serif);font-weight:300;font-size:18px;padding-top:8px;letter-spacing:0.02em;line-height:1;}
-.work-bar-tabs{display:flex;gap:28px;}
-.work-tab{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);cursor:pointer;transition:color 0.2s;border-bottom:1px solid transparent;padding-bottom:1px;}
+.work-bar{position:sticky;top:64px;z-index:400;background:var(--white);width:100%;height:112px;padding:14px var(--pad) 14px;display:flex;flex-direction:column;justify-content:space-between;}
+.work-bar-title{font-family:var(--serif);font-weight:300;font-size:34px;padding-top:8px;letter-spacing:0.02em;line-height:1;}
+.work-bar-tabs{display:flex;gap:40px;}
+.work-tab{font-family:var(--sans);font-weight:300;font-size:15px;letter-spacing:0.12em;text-transform:lowercase;color:var(--mid);cursor:pointer;transition:color 0.2s;border-bottom:1px solid transparent;padding-bottom:1px;}
 .work-tab:hover,.work-tab.active{color:var(--black);border-bottom-color:var(--black);}
 .work-group{padding:64px var(--pad) 0;}
 .group-label{font-family:var(--serif);font-weight:300;font-size:28px;letter-spacing:0.01em;margin-bottom:48px;}
@@ -175,7 +175,7 @@ img{display:block;width:100%;object-fit:cover;}
     <span class="work-bar-title">Work</span>
     <div class="work-bar-tabs">
       <span class="work-tab active" onclick="scrollToGroup('woven',this)">woven</span>
-      <!-- <span class="work-tab" onclick="scrollToGroup('print',this)">print</span> -->
+      <span class="work-tab" onclick="scrollToGroup('print',this)">print</span>
       <span class="work-tab" onclick="scrollToGroup('surface',this)">surface development</span>
       <span class="work-tab" onclick="scrollToGroup('apparel',this)">apparel</span>
       <span class="work-tab" onclick="scrollToGroup('narrative',this)">narrative</span>
@@ -214,29 +214,28 @@ img{display:block;width:100%;object-fit:cover;}
     </a>
   </div>
 
-  <!-- PRINT (hidden while editing, un-comment when ready to publish)
+  <!-- PRINT -->
   <div class="work-group" id="print">
     <p class="group-label">Print</p>
     <a class="project-row img-right" href="projects/advanced-print.html">
       <div class="project-text">
         <h3 class="project-name">Kaldi</h3>
         <p class="project-course">Advanced Print Design</p>
-        <p class="project-desc">A home textile print collection rooted in the wooden cutlery craft of Udayagiri, Nellore. The carved motif was translated into a surface language for the table, resolving into a coordinated set across teal, brown, red, cream and burgundy grounds.</p>
+        <p class="project-desc">A home textile print collection drawn from the wooden cutlery of Udayagiri, Nellore. The carved spoons and forks became the motif for wallpaper, table linen, cushions, curtains and a carpet, each planned for screen printing.</p>
         <span class="vp">view project</span>
       </div>
-      <div class="project-img"><img src="images/advanced-print/p-096.jpg" alt="Advanced Print"/></div>
+      <div class="project-img"><img loading="lazy" decoding="async" src="images/home-thumbs/kaldi.jpg" alt="Kaldi"/></div>
     </a>
     <a class="project-row img-left" href="projects/print-concept.html">
       <div class="project-text">
         <h3 class="project-name">Tendrils</h3>
         <p class="project-course">Surface Design &nbsp;·&nbsp; Print Concept</p>
-        <p class="project-desc">A continuation of two courses, moving from a plant study of Poranopsis paniculata into a fully developed botanical jaal. The final rendering was built in response to Jayasri Burman's painting Weeping Grace.</p>
+        <p class="project-desc">One climbing plant carried across two courses: a black and white jaal in Surface Design, then the same jaal reworked for Jayasri Burman's painting Weeping Grace and for the brand The Shop.</p>
         <span class="vp">view project</span>
       </div>
-      <div class="project-img"><img src="images/print-concept/p-045.jpg" alt="Print Concept"/></div>
+      <div class="project-img"><img loading="lazy" decoding="async" src="images/home-thumbs/tendrils.jpg" alt="Tendrils"/></div>
     </a>
   </div>
-  -->
 
   <!-- SURFACE DEVELOPMENT -->
   <div class="work-group" id="surface">
