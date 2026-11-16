@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ikat, Alma Rachel Ipe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--black:#1a1a1a;--white:#ffffff;--grey:#f0f0ee;--mid:#999;--serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;--pad:40px;--gap:10px;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;object-fit:cover;}
+.proj-nav{position:sticky;top:0;background:var(--white);z-index:400;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);border-bottom:1px solid #ebebeb;}
+.proj-back{font-size:11px;letter-spacing:0.08em;color:var(--black);transition:opacity 0.2s;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.proj-back:hover{opacity:0.5;}
+.proj-site-name{font-family:var(--serif);font-weight:300;font-size:16px;letter-spacing:0.04em;}
+.det-tag{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);}
+.det-h1{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1.05;letter-spacing:0.01em;}
+.det-sub{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:6px;}
+.det-body{font-size:16px;line-height:1.95;color:#444;}
+.det-section{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);font-weight:400;}
+.px{padding:0 var(--pad);}
+.mb8{margin-bottom:8px;}.mb16{margin-bottom:16px;}.mb24{margin-bottom:24px;}.mb32{margin-bottom:32px;}.mb40{margin-bottom:40px;}.mb48{margin-bottom:48px;}.mb64{margin-bottom:64px;}.mb0{margin-bottom:0;}
+.pb80{padding-bottom:80px;}.pt32{padding-top:32px;}
+.fw{width:100%;display:block;object-fit:cover;}
+.cap{font-size:12px;color:var(--mid);letter-spacing:0.05em;line-height:1.5;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap);}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
+.det-next{border-top:1px solid #ebebeb;padding:48px var(--pad) 80px;display:flex;justify-content:space-between;align-items:center;}
+.next-sm{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
+.next-nm{font-family:var(--serif);font-weight:300;font-size:24px;transition:opacity 0.2s;text-decoration:none;display:block;}
+.next-nm:hover{opacity:0.5;}
+.next-ar{font-size:22px;transition:transform 0.2s;text-decoration:none;}
+.next-ar:hover{transform:translateX(5px);}
+.page-img{width:100%;object-fit:contain;background:var(--white);border:1px solid #ebebeb;}
+.sub-sect{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#666;font-weight:400;margin-top:24px;margin-bottom:8px;}
+@media(max-width:768px){:root{--pad:24px;}.det-h1{font-size:26px;}.g2,.g3,.g4{grid-template-columns:1fr;}.det-next{padding:40px 24px 60px;}
+  [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+}</style>
+<link rel="stylesheet" href="project.css?v=1115c"/>
+<style>:root{--band:linear-gradient(90deg,#d8759a 0% 11%,#7a5a35 11% 12.5%,#c9679c 12.5% 26%,#f2a03d 26% 42%,#7a5a35 42% 43.5%,#e9a07f 43.5% 57%,#b0703a 57% 58.5%,#ee9a5c 58.5% 73%,#7a5a35 73% 74.5%,#ee9a5c 74.5% 89%,#f6c04a 89% 100%);}
+.hero-in{margin:28px 0 8px;padding:0 var(--pad);max-width:none !important;}
+.row{display:flex;gap:36px;align-items:flex-start;margin:0 auto 36px 0;}
+.scale{display:flex;gap:7%;align-items:flex-end;margin:10px 0 44px;}
+.scale figure{margin:0;flex:none;width:calc(var(--w)*4.3%);}
+.scale img{width:100%;height:auto;object-fit:contain;cursor:zoom-in;}
+.scale figcaption{font-size:12px;color:var(--mid);letter-spacing:0.04em;line-height:1.5;margin-top:10px;}
+.scale-note{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.scale img.reveal{opacity:1 !important;translate:none !important;}
+.row figure{min-width:0;margin:0;}
+.row img{width:100%;height:auto;object-fit:contain;cursor:zoom-in;}
+.row figcaption{font-size:12px;color:var(--mid);letter-spacing:0.04em;line-height:1.5;margin-top:8px;}
+.row.line img{border:1px solid #ececea;}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);max-width:980px;gap:22px 40px;margin-top:8px;}
+.facts dt{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.facts dd{font-size:15px;line-height:1.7;color:#444;}
+.trial{font-size:14px;line-height:1.75;color:#444;margin-top:10px;}
+.trial b{font-weight:400;color:var(--black);letter-spacing:0.04em;}
+.sub-sect{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);margin:26px 0 12px;}
+.row img.reveal{opacity:1 !important;translate:none !important;}
+.credits dl .proc-mini{margin-left:auto;text-align:right;}
+.credits .proc-mini a{border-bottom:1px solid #bbb;padding-bottom:2px;transition:border-color .2s;}
+.credits .proc-mini a:hover{border-color:#1a1a1a;}
+.credits dl{display:flex !important;flex-wrap:wrap;gap:28px 48px;}
+@media(max-width:768px){.credits dl .proc-mini{margin-left:0;text-align:left;}}
+.proc-link{display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid #1a1a1a;padding:26px 30px;margin-top:64px;transition:background .25s,color .25s;}
+.proc-link:hover{background:#1a1a1a;color:#fff;}
+.proc-link small{display:block;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;opacity:.6;margin-bottom:6px;}
+.proc-link span.t{font-family:var(--serif);font-size:28px;line-height:1.2;}
+.proc-link span.a{font-size:24px;}
+@media(max-width:768px){.scale{flex-direction:column;align-items:flex-start;gap:26px;}.scale figure{width:calc(var(--w)*11%);}.row{gap:22px;}.facts{grid-template-columns:1fr;}.row{flex-direction:column;max-width:none !important;}.row figure{flex:none !important;width:100%;}}
+.pstep{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:56px;align-items:start;padding:44px 0;border-top:1px solid #ebebeb;}
+.ps-text{position:sticky;top:96px;}
+.ps-n{display:block;font-size:11px;letter-spacing:0.2em;color:var(--mid);margin-bottom:10px;}
+.ps-t{font-family:var(--serif);font-weight:300;font-size:30px;line-height:1.15;margin-bottom:14px;}
+.ps-x{font-size:15px;line-height:1.85;color:#444;}
+.ps-imgs{display:flex;flex-wrap:wrap;gap:14px;}
+.ps-imgs figure{margin:0;}
+.ps-imgs img{height:190px;width:auto;object-fit:cover;cursor:zoom-in;}
+.ps-imgs.one img{height:auto;max-height:440px;max-width:100%;}
+.ps-imgs figcaption{font-size:12px;color:var(--mid);margin-top:8px;}
+@media(max-width:768px){.pstep{grid-template-columns:1fr;gap:20px;padding:32px 0;}.ps-text{position:static;}.ps-imgs img{height:150px;}}
+.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 18px;}
+.ps-imgs.fit{flex-wrap:nowrap;align-items:flex-start;}
+.ps-imgs.fit figure{min-width:0;}
+.ps-imgs.fit img{width:100%;height:auto;max-height:none;}
+.ps-imgs.stack{flex-direction:column;gap:22px;}
+.ps-imgs.stack figure{flex:none !important;width:100%;}
+.ps-imgs.stack img{width:100%;height:auto;}
+.stole-h{border-top:1px solid #ebebeb;padding:44px 0 20px;}
+.pstep:last-of-type{padding-bottom:56px;}
+.samples figure{margin:0;}
+.samples img{width:100%;aspect-ratio:4/5;object-fit:cover;cursor:zoom-in;}
+.samples figcaption{font-size:12px;color:var(--mid);letter-spacing:0.08em;margin-top:8px;}
+.hero-shot{width:100%;height:auto;margin-bottom:56px;}
+@media(max-width:768px){.samples{grid-template-columns:1fr 1fr;gap:18px 14px;}.ps-imgs.fit{flex-wrap:wrap;}.ps-imgs.fit figure{flex:1 1 40% !important;}}
+</style>
+</head>
+<body>
+
+<div class="proj-nav">
+  <a class="proj-back" href="../index.html">← All Work</a>
+  <span class="proj-site-name">Alma Rachel Ipe</span>
+</div>
+
+<div class="px pt32 mb32">
+  <p class="det-tag mb8">Woven</p>
+  <h1 class="det-h1">Ikat</h1>
+  <p class="det-sub mb16">Warp ikat stole</p>
+  <p class="det-body">One tied and dyed warp, woven as a single stole that moves through six structures. The motif stays the same from end to end; the weave and the weft keep changing how it reads. Woven in 2/60s cotton, with the warp dyed in vat dyes.</p>
+</div>
+
+<div class="px"><img class="hero-shot" src="../images/ikat/shoot-6651.jpg" width="1800" height="1200" alt="The ikat stole hung on concrete rings"/></div>
+
+<div class="px"><section class="pstep">
+  <div class="ps-text"><span class="ps-n">01</span><h2 class="ps-t">The Trend</h2><p class="ps-x">The project began with Constructive Chaos, a WGSN trend direction about the right to play: clashing brights, bold geometric pattern and a maximalist approach to colour.</p></div>
+  <div class="ps-imgs fit">
+  <figure style="flex:1.208"><img src="../images/ikat/trend.jpg" width="1462" height="1210" alt="Constructive Chaos, WGSN" loading="lazy"/><figcaption>Constructive Chaos, WGSN</figcaption></figure>
+  </div>
+</section></div>
+<div class="px"><section class="pstep">
+  <div class="ps-text"><span class="ps-n">02</span><h2 class="ps-t">The Reference: Yinka Ilori</h2><p class="ps-x">Looking for an artist who works in that spirit led me to Yinka Ilori, a British-Nigerian artist and designer based in London. His work draws on his Nigerian heritage and brings loud, joyful colour and pattern to furniture, public spaces and installations. What I took from him was the way a few simple rounded shapes, repeated and stacked, can carry a whole surface.</p></div>
+  <div class="ps-imgs stack">
+  <figure style="flex:1.943"><img src="../images/ikat/process/ref-1.jpg" width="1300" height="669" alt="Work by Yinka Ilori" loading="lazy"/><figcaption>Work by Yinka Ilori</figcaption></figure>
+  </div>
+</section></div>
+<div class="px"><section class="pstep">
+  <div class="ps-text"><span class="ps-n">03</span><h2 class="ps-t">Artwork</h2><p class="ps-x">From that study I drew two motifs of my own, one of leaf shapes crossed by circles and one of tall hourglass columns, and redrew them square by square as graphs that could be tied into a warp.</p></div>
+  <div class="ps-imgs fit">
+  <figure style="flex:0.572"><img src="../images/ikat/process/art-1.jpg" width="743" height="1300" alt="Artwork 1" loading="lazy"/><figcaption>Artwork 1</figcaption></figure>
+  <figure style="flex:0.659"><img src="../images/ikat/process/art-2.jpg" width="857" height="1300" alt="Artwork 2" loading="lazy"/><figcaption>Artwork 2</figcaption></figure>
+  <figure style="flex:0.763"><img src="../images/ikat/process/graph.jpg" width="688" height="902" alt="The two graphs for tying" loading="lazy"/><figcaption>The two graphs for tying</figcaption></figure>
+  </div>
+</section></div>
+
+<div class="px"><div class="stole-h"><span class="ps-n">04</span><h2 class="ps-t">The Stole</h2></div></div>
+<div class="px"><div class="row" style="max-width:100%">
+  <figure style="flex:1.500"><img src="../images/ikat/shoot-6721.jpg" width="1800" height="1200" alt="Ikat stole" loading="lazy"/></figure>
+</div></div>
+<div class="px"><div class="row" style="max-width:100%">
+  <figure style="flex:0.666"><img src="../images/ikat/shoot-6658.jpg" width="933" height="1400" alt="Ikat stole" loading="lazy"/></figure>
+  <figure style="flex:0.666"><img src="../images/ikat/shoot-6653.jpg" width="933" height="1400" alt="Ikat stole" loading="lazy"/></figure>
+  <figure style="flex:1.501"><img src="../images/ikat/shoot-6639.jpg" width="1400" height="933" alt="Ikat stole" loading="lazy"/></figure>
+</div></div>
+
+<div class="px"><section class="pstep">
+  <div class="ps-text"><span class="ps-n">05</span><h2 class="ps-t">The Samples</h2><p class="ps-x">Six sections of the same warp, each in a different structure.</p></div>
+  <div class="samples">
+    <figure><img src="../images/ikat/sample-2.jpg" alt="Ikat sample 1" loading="lazy"/><figcaption>01</figcaption></figure>
+    <figure><img src="../images/ikat/sample-3.jpg" alt="Ikat sample 2" loading="lazy"/><figcaption>02</figcaption></figure>
+    <figure><img src="../images/ikat/sample-4.jpg" alt="Ikat sample 3" loading="lazy"/><figcaption>03</figcaption></figure>
+    <figure><img src="../images/ikat/sample-5.jpg" alt="Ikat sample 4" loading="lazy"/><figcaption>04</figcaption></figure>
+    <figure><img src="../images/ikat/sample-6.jpg" alt="Ikat sample 5" loading="lazy"/><figcaption>05</figcaption></figure>
+    <figure><img src="../images/ikat/sample-7.jpg" alt="Ikat sample 6" loading="lazy"/><figcaption>06</figcaption></figure>
+  </div>
+</section></div>
+
+<div class="px credits">
+  <p class="credits-h">Credits</p>
+  <dl><div><dt>Guidance</dt><dd>Vyshak T P</dd></div><div><dt>Photography</dt><dd>Anan Ajay</dd></div><div class="proc-mini"><dt>Process</dt><dd><a href="ikat-process.html">See how it was made <span>→</span></a></dd></div></dl>
+</div>
+<div class="det-next">
+  <div><p class="next-sm">Next Project</p><a class="next-nm" href="advanced-weaving.html">Advanced Weaving →</a></div>
+  <a class="next-ar" href="advanced-weaving.html">→</a>
+</div>
+
+<script src="project.js?v=1115c"></script>
+</body>
+</html>
