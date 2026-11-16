@@ -43,6 +43,11 @@ img{display:block;width:100%;object-fit:cover;}
   [style*="display:flex"][style*="gap:32px"]{flex-direction:column !important;}
   .det-next{padding:40px 24px 60px;}
 }
+.credits dl .proc-mini{margin-left:auto;text-align:right;}
+.credits .proc-mini a{border-bottom:1px solid #bbb;padding-bottom:2px;transition:border-color .2s;}
+.credits .proc-mini a:hover{border-color:#1a1a1a;}
+.credits dl{display:flex !important;flex-wrap:wrap;gap:28px 48px;}
+@media(max-width:768px){.credits dl .proc-mini{margin-left:0;text-align:left;}}
 </style>
 <link rel="stylesheet" href="project.css?v=1115c"/>
 <style>:root{--band:url(../images/home-thumbs/selvedge-1.jpg);}</style>
@@ -203,7 +208,7 @@ img{display:block;width:100%;object-fit:cover;}
 <!-- NEXT PROJECT -->
 <div class="px credits">
   <p class="credits-h">Credits</p>
-  <dl><div><dt>Guidance</dt><dd>Karthik Balaraman</dd></div></dl>
+  <dl><div><dt>Guidance</dt><dd>Karthik Balaraman</dd></div><div class="proc-mini"><dt>Process</dt><dd><a href="basic-weaving-process.html">See how it was made <span>→</span></a></dd></div></dl>
 </div>
 <div class="det-next">
   <div><p class="next-sm">Next Project</p><a class="next-nm" href="fabric-construction.html">Fabric Construction →</a></div>
